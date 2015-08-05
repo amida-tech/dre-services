@@ -1,0 +1,1521 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Data Reconciliation Engine API",
+        "description": "Handles data services for DRE UI"
+    },
+    "tags": [{
+        "name": "account"
+    }, {
+        "name": "history"
+    }, {
+        "name": "matches"
+    }, {
+        "name": "match"
+    }, {
+        "name": "medications"
+    }, {
+        "name": "merges"
+    }, {
+        "name": "notes"
+    }, {
+        "name": "notifications"
+    }, {
+        "name": "record"
+    }, {
+        "name": "storage"
+    }, {
+        "name": "medapi"
+    }, {
+        "name": "npiapi"
+    }],
+    "host": "localhost:3000",
+    "basePath": "/api/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/account_history/mostRecent": {
+            "get": {
+                "summary": "Returns most recent events in a user's account history",
+                "description": "Return event for register, log in/out, up/download file, lab results, password change, personal information changed",
+                "operationId": "addEvent",
+                "tags": [
+                    "history"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "event succesfully created and added",
+                        "schema": {
+                            "$ref": "#/definitions/eventSchema"
+                        }
+                    }
+                }
+            }
+        },
+        "/account_history/all": {
+            "get": {
+                "summary": "Returns all events in a user's account history",
+                "description": "Shows registered, logged in/out, file up/downloaded, lab results received, password changed, info updated",
+                "operationId": "allEventsInOrder",
+                "tags": [
+                    "history"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "event history returned",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/eventSchema"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/storage": {
+            "get": {
+                "summary": "Get list of files in user's storage",
+                "description": "Files and metadata from My Files",
+                "operationId": "allFiles",
+                "tags": [
+                    "storage"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "files returned",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fileSchema"
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Uploads a file",
+                "description": "Upload, match, merge or save to my files without importing using check flag",
+                "operationId": "processUpload",
+                "tags": [
+                    "storage"
+                ],
+                "consumes": ["multipart/form-data"],
+                "parameters": [{
+                    "name": "file",
+                    "description": "File to be uploaded",
+                    "in": "formData",
+                    "type": "file",
+                    "required": true
+                }, {
+                    "name": "check",
+                    "description": "Save file without importing entries or update Master Health Record",
+                    "in": "formData",
+                    "type": "boolean",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "file uploaded",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "error"
+                    }
+                }
+            }
+        },
+        "/storage/record/{identifier}": {
+            "get": {
+                "summary": "Downloads a file",
+                "description": "Retrieves a specific file for download",
+                "operationId": "getSource",
+                "tags": [
+                    "storage"
+                ],
+                "parameters": [{
+                    "name": "identifier",
+                    "description": "File to be downloaded",
+                    "in": "path",
+                    "type": "string",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "file"
+                    },
+                    "400": {
+                        "description": "Event error"
+                    }
+                }
+            }
+        },
+        "/account": {
+            "get": {
+                "summary": "Authentication check",
+                "description": "Check if user is authenticated",
+                "operationId": "authenticated",
+                "tags": [
+                    "account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Account is authenticated",
+                        "schema": {
+                            "$ref": "#/definitions/accountSchema"
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "post": {
+                "summary": "Check if username exists",
+                "description": "Check if username exists during registration",
+                "operationId": "checkUsername",
+                "tags": [
+                    "account"
+                ],
+                "parameters": [{
+                    "name": "username",
+                    "description": "Username",
+                    "in": "body",
+                    "type": "string",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "check if username exists",
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "summary": "Register a new user",
+                "description": "Create a new account and save registration information",
+                "operationId": "register",
+                "tags": [
+                    "account"
+                ],
+                "parameters": [{
+                    "name": "registration info",
+                    "description": "Registration input for account and profile",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/regSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Account created"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "summary": "Log in",
+                "description": "Registered user logs into account",
+                "operationId": "login",
+                "tags": [
+                    "account"
+                ],
+                "parameters": [{
+                    "name": "username",
+                    "description": "Login form input",
+                    "in": "query",
+                    "type": "string",
+                    "required": true
+                }, {
+                    "name": "password",
+                    "description": "Login form input",
+                    "in": "query",
+                    "type": "string",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Login successful"
+                    },
+                    "400": {
+                        "description": "Event error"
+                    }
+                }
+            }
+        },
+        "/logout": {
+            "post": {
+                "summary": "Log out",
+                "description": "Registered user logs out of account",
+                "operationId": "logout",
+                "tags": [
+                    "account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Log out successful"
+                    },
+                    "400": {
+                        "description": "Event error"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get log out",
+                "description": "Log out with GET",
+                "operationId": "getLogout",
+                "tags": [
+                    "account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User logged out"
+                    },
+                    "400": {
+                        "description": "Event error"
+                    }
+                }
+            }
+        },
+        "/changepassword": {
+            "post": {
+                "summary": "Change password",
+                "description": "Logged in user changes password",
+                "operationId": "changePassword",
+                "tags": [
+                    "account"
+                ],
+                "parameters": [{
+                    "name": "passwords",
+                    "description": "Old and new passwords",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/passwordSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Password change success"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/record/demographics": {
+            "post": {
+                "summary": "Save profile information",
+                "description": "Save profile information to demographics section",
+                "operationId": "saveProfile",
+                "tags": [
+                    "record"
+                ],
+                "parameters": [{
+                    "name": "profileInfo",
+                    "description": "Profile section information and database ID",
+                    "in": "body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/bodySchema"
+                    }
+                }],
+                "summary": "Update profile information",
+                "responses": {
+                    "200": {
+                        "description": "OK. Profile information updated"
+                    },
+                    "400": {
+                        "description": "Event error"
+                    }
+                }
+            }
+        },
+        "/record/{component}": {
+            "get": {
+                "summary": "View entries for component",
+                "description": "Retrieve specific component from Master Health Record",
+                "operationId": "getComponent",
+                "tags": [
+                    "record"
+                ],
+                "parameters": [{
+                    "name": "component",
+                    "description": "area of health",
+                    "in": "path",
+                    "type": "string",
+                    "enum": [
+                        "demographics",
+                        "medications",
+                        "results",
+                        "encounters",
+                        "vitals",
+                        "immunizations",
+                        "allergies",
+                        "conditions",
+                        "procedures",
+                        "social"
+                    ],
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Component retrieved"
+                    },
+                    "404": {
+                        "description": "Component not supported"
+                    },
+                    "500": {
+                        "description": "Error retrieving component"
+                    }
+                }
+            }
+        },
+        "/master_health_record/{format}": {
+            "get": {
+                "summary": "Download Master Health Record",
+                "description": "Retrieve all components and download",
+                "operationId": "getMHR",
+                "tags": [
+                    "record"
+                ],
+                "parameters": [{
+                    "name": "format",
+                    "description": "Defaults to CCDA format",
+                    "in": "path",
+                    "type": "string",
+                    "enum": [
+                        "json",
+                        "string"
+                    ],
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Master health record downloaded in Blue Button or CCDA format"
+                    },
+                    "400": {
+                        "description": "Event error while saving event"
+                    },
+                    "500": {
+                        "description": "Error getting Master Health Record"
+                    }
+                }
+            }
+        },
+        "/get_record": {
+            "get": {
+                "summary": "Retrieve entire record",
+                "description": "Retrieve all components and download",
+                "operationId": "getRecord",
+                "tags": [
+                    "record"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrieve all components in Master Health Record"
+                    },
+                    "500": {
+                        "description": "Error retrieving record"
+                    }
+                }
+            }
+        },
+        "/matches/{component}": {
+            "get": {
+                "summary": "Retrieve matches",
+                "description": "Retrieve all matches for one components",
+                "operationId": "getMatches",
+                "tags": [
+                    "matches"
+                ],
+                "parameters": [{
+                    "name": "component",
+                    "description": "area of health",
+                    "in": "path",
+                    "type": "string",
+                    "enum": [
+                        "demographics",
+                        "medications",
+                        "results",
+                        "encounters",
+                        "vitals",
+                        "immunizations",
+                        "allergies",
+                        "conditions",
+                        "procedures",
+                        "social"
+                    ],
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get all matches for a component"
+                    },
+                    "400": {
+                        "description": "Error retrieving matches"
+                    },
+                    "404": {
+                        "description": "Not a supported component"
+                    }
+                }
+            }
+        },
+        "/match/{component}/{record_id}": {
+            "parameters": [{
+                "name": "component",
+                "in": "path",
+                "description": "area of health",
+                "type": "string",
+                "enum": [
+                    "demographics",
+                    "medications",
+                    "results",
+                    "encounters",
+                    "vitals",
+                    "immunizations",
+                    "allergies",
+                    "conditions",
+                    "procedures",
+                    "social"
+                ],
+                "required": true
+            }, {
+                "name": "record_id",
+                "in": "path",
+                "description": "ID for component",
+                "type": "string",
+                "required": true
+            }],
+            "get": {
+                "summary": "Retrieve a single match",
+                "description": "Retrieve a single match from a component",
+                "operationId": "getMatch",
+                "tags": [
+                    "matches"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get single match API"
+                    },
+                    "400": {
+                        "description": "Error retrieving match"
+                    },
+                    "404": {
+                        "description": "Component not supported"
+                    }
+                }
+            }
+        },
+        "/matches/{component}/{record_id}": {
+            "parameters": [{
+                "name": "component",
+                "in": "path",
+                "description": "area of health",
+                "type": "string",
+                "enum": [
+                    "demographics",
+                    "medications",
+                    "results",
+                    "encounters",
+                    "vitals",
+                    "immunizations",
+                    "allergies",
+                    "conditions",
+                    "procedures",
+                    "social"
+                ],
+                "required": true
+            }, {
+                "name": "record_id",
+                "in": "path",
+                "description": "ID for component",
+                "type": "string",
+                "required": true
+            }],
+            "post": {
+                "summary": "Post update",
+                "description": "Post partial record updates",
+                "operationId": "saveMatches",
+                "tags": [
+                    "matches"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Partial record updates"
+                    },
+                    "404": {
+                        "description": "Component not supported"
+                    },
+                    "400": {
+                        "description": "Error updating record"
+                    }
+                }
+            }
+        },
+        "/matches/{component}/{record_id}/{record_index}": {
+            "parameters": [{
+                "name": "component",
+                "in": "path",
+                "description": "area of health",
+                "type": "string",
+                "enum": [
+                    "demographics",
+                    "medications",
+                    "results",
+                    "encounters",
+                    "vitals",
+                    "immunizations",
+                    "allergies",
+                    "conditions",
+                    "procedures",
+                    "social"
+                ],
+                "required": true
+            }, {
+                "name": "record_id",
+                "in": "path",
+                "description": "ID for component",
+                "type": "string"
+            }, {
+                "name": "record_index",
+                "in": "path",
+                "description": "specific ID entry",
+                "type": "string"
+            }],
+            "post": {
+                "summary": "Post update",
+                "description": "Post partial record update",
+                "operationId": "saveMatch",
+                "tags": [
+                    "matches"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Partial record updates"
+                    },
+                    "404": {
+                        "description": "Component not supported"
+                    },
+                    "400": {
+                        "description": "Error updating record"
+                    }
+                }
+            }
+        },
+        "/medications/all": {
+            "get": {
+                "summary": "Get all medications",
+                "description": "Retrieve all medications in chronological order",
+                "tags": [
+                    "medications"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all medications"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/medications/add": {
+            "post": {
+                "summary": "Save a medication",
+                "description": "Add and save a new medication",
+                "tags": [
+                    "medications"
+                ],
+                "parameters": [{
+                    "name": "Medication",
+                    "description": "New medication entry",
+                    "in": "body",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Medication added to account"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/medications/edit": {
+            "post": {
+                "summary": "Edit a medication",
+                "description": "Edit a current medication",
+                "tags": [
+                    "medications"
+                ],
+                "parameters": [{
+                    "name": "Medication",
+                    "description": "Updated medication entry",
+                    "in": "body",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Edited medication"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/medications/delete": {
+            "post": {
+                "summary": "Delete a medication",
+                "description": "Delete a medication by its ID",
+                "tags": [
+                    "medications"
+                ],
+                "parameters": [{
+                    "name": "Medication ID",
+                    "description": "Medication identifier",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/deleteMedicationSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Medication successfully deleted"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/merges": {
+            "get": {
+                "summary": "Get all merges",
+                "description": "Retrieve merges for all components",
+                "tags": [
+                    "merges"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all merges"
+                    },
+                    "400": {
+                        "description": "Error retrieving all merges"
+                    }
+                }
+            }
+        },
+        "/merges/{component}": {
+            "get": {
+                "summary": "Get merges by component",
+                "description": "Get merges by component",
+                "parameters": [{
+                    "name": "component",
+                    "description": "area of health",
+                    "in": "path",
+                    "type": "string",
+                    "enum": [
+                        "demographics",
+                        "medications",
+                        "results",
+                        "encounters",
+                        "vitals",
+                        "immunizations",
+                        "allergies",
+                        "conditions",
+                        "procedures",
+                        "social"
+                    ],
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Merges successful"
+                    },
+                    "404": {
+                        "description": "Component not supported"
+                    },
+                    "400": {
+                        "description": "Error retrieving merges"
+                    }
+                },
+                "tags": [
+                    "merges"
+                ]
+            }
+        },
+        "/notification": {
+            "get": {
+                "summary": "All notifications",
+                "description": "includes new record count from merge",
+                "responses": {
+                    "200": {
+                        "description": "Notifications counted",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/notificationSchema"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error retrieving notifications"
+                    }
+                },
+                "tags": [
+                    "notifications"
+                ]
+            }
+        },
+        "/notes/all": {
+            "get": {
+                "summary": "Retrieve all notes",
+                "description": "Retrieve all notes in chronological order",
+                "tags": [
+                    "notes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all notes",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/noteSchema"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/notes/add": {
+            "post": {
+                "summary": "Save a note",
+                "description": "Add and save a new note",
+                "tags": [
+                    "notes"
+                ],
+                "parameters": [{
+                    "name": "Note",
+                    "description": "Entry, section, note",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/addNoteSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Note added to account",
+                        "schema": {
+                            "$ref": "#/definitions/noteSchema"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/notes/star": {
+            "post": {
+                "summary": "Star a note",
+                "description": "Star a note to mark as important",
+                "tags": [
+                    "notes"
+                ],
+                "parameters": [{
+                    "name": "Star",
+                    "description": "Mark notes as important",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/starSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Star a note",
+                        "schema": {
+                            "$ref": "#/definitions/noteSchema"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/notes/edit": {
+            "post": {
+                "summary": "Edit a note",
+                "description": "Edit a note that already exists",
+                "tags": [
+                    "notes"
+                ],
+                "parameters": [{
+                    "name": "note",
+                    "description": "Updated note to be saved",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/editNoteSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Edited note",
+                        "schema": {
+                            "$ref": "#/definitions/noteSchema"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/notes/delete": {
+            "post": {
+                "summary": "Delete a note",
+                "description": "Locate a note using ID and delete",
+                "tags": [
+                    "notes"
+                ],
+                "parameters": [{
+                    "name": "note ID",
+                    "description": "Note locator",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/deleteNoteSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Note successfully deleted"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/rximage": {
+            "post": {
+                "summary": "Look up image for an RxNorm code",
+                "description": "Retrieve image URL from NIH NLM RxImage database",
+                "tags": [
+                    "medapi"
+                ],
+                "parameters": [{
+                    "name": "RxCUI",
+                    "description": "RxNorm code",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/rxcuiSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get images",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/rximageSchema"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/rxnorm/name": {
+            "post": {
+                "summary": "Look up drug RxNorm code using name",
+                "description": "Retrieve RxCUI from RxNorm database",
+                "tags": [
+                    "medapi"
+                ],
+                "parameters": [{
+                    "name": "medname",
+                    "description": "drug name",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/mednameSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get RxNorm code",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/RxNormSchema"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/rxnorm/group": {
+            "post": {
+                "summary": "Look up multiple drugs in RxNorm database using name",
+                "description": "Retrieve RxCUI options from RxNorm database",
+                "tags": [
+                    "medapi"
+                ],
+                "parameters": [{
+                    "name": "medname",
+                    "description": "drug name",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/mednameSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get RxNorm code",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/openfda/name": {
+            "post": {
+                "summary": "Look up openFDA database",
+                "description": "Retrieve adverse events from openFDA.gov using drug name",
+                "tags": [
+                    "medapi"
+                ],
+                "parameters": [{
+                    "name": "medname",
+                    "description": "drug name",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/mednameSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get openFDA data",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/openfda/code": {
+            "post": {
+                "summary": "Look up openFDA database",
+                "description": "Retrieve adverse events from openFDA.gov using RxNorm code",
+                "tags": [
+                    "medapi"
+                ],
+                "parameters": [{
+                    "name": "rxcui",
+                    "description": "drug code",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/rxcuiSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get openFDA data",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/medlineplus": {
+            "post": {
+                "summary": "Look up drug information in MedlinePlus Connect",
+                "description": "Retrieve URLs for MedlinePlus information on drug using RxNorm code",
+                "tags": [
+                    "medapi"
+                ], 
+                "parameters": [{
+                    "name": "rxcui",
+                    "description": "drug code",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/rxcuiSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get MedlinePlus Connect URL",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/findnpi": {
+            "post": {
+                "summary": "Look up NPI information in bloomAPI",
+                "description": "Retrieve provider information",
+                "tags": [
+                    "npiapi"
+                ],
+                "parameters": [{
+                    "name": "searchObj",
+                    "description": "{'name':[{'first':'firstName', 'last':'lastName'}]}",
+                    "in": "body",
+                    "schema": {
+                        "$ref": "#/definitions/npiSchema"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Get NPI data",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "eventSchema": {
+            "required": [
+                "userID",
+                "event_type"
+            ],
+            "properties": {
+                "dbID": {
+                    "type": "string"
+                },
+                "userID": {
+                    "type": "string"
+                },
+                "event_type": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "string"
+                },
+                "fileRef": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "fileSchema": {
+            "required": [
+                "file_id",
+                "file_name",
+                "file_size",
+                "file_mime_type",
+                "file_upload_date",
+                "file_class",
+                "patient_key"
+            ],
+            "properties": {
+                "file_id": {
+                    "type": "string"
+                },
+                "file_name": {
+                    "type": "string"
+                },
+                "file_size": {
+                    "type": "integer"
+                },
+                "file_mime_type": {
+                    "type": "string"
+                },
+                "file_upload_date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "file_class": {
+                    "type": "string"
+                },
+                "patient_key": {
+                    "type": "string"
+                }
+            }
+        },
+        "checkSchema": {
+            "required": [
+                "check"
+            ],
+            "properties": {
+                "check": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "accountSchema": {
+            "required": [
+                "authenticated"
+            ],
+            "properties": {
+                "authenticated": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "userSchema": {
+            "required": [
+                "_id",
+                "salt",
+                "hash",
+                "username",
+                "_v"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "salt": {
+                    "type": "string"
+                },
+                "hash": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "_v": {
+                    "type": "integer"
+                }
+            }
+        },
+        "regSchema": {
+            "required": [
+                "username",
+                "password",
+                "firstName",
+                "lastName",
+                "dob",
+                "gender",
+                "email"
+            ],
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "dob": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "passwordSchema": {
+            "required": [
+                "old",
+                "new"
+            ],
+            "properties": {
+                "old": {
+                    "type": "string"
+                },
+                "new": {
+                    "type": "string"
+                }
+            }
+        },
+        "profileSchema": {
+            "required": [
+                "username",
+                "_id"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "bodySchema": {
+            "required": [
+                "data"
+            ],
+            "properties": {
+                "data": {
+                    "type": "string"
+                }
+            }
+        },
+        "noteSchema": {
+            "required": [
+                "username",
+                "section",
+                "entry",
+                "note",
+                "star",
+                "datetime"
+            ],
+            "properties": {
+                "section": {
+                    "type": "string"
+                },
+                "_id": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "entry": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "string"
+                },
+                "star": {
+                    "type": "boolean"
+                },
+                "datetime": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "_v": {
+                    "type": "integer"
+                }
+            }
+        },
+        "starSchema": {
+            "required": [
+                "username",
+                "id",
+                "star"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "star": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "editNoteSchema": {
+            "required": [
+                "username",
+                "id",
+                "note"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "string"
+                }
+            }
+        },
+        "addNoteSchema": {
+            "required": [
+                "username",
+                "section",
+                "entry",
+                "note"
+            ],
+            "properties": {
+                "section": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "entry": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "string"
+                }
+            }
+        },
+        "deleteNoteSchema": {
+            "required": [
+                "username",
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "deleteMedicationSchema": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "notificationSchema": {
+            "required": [
+                "unreviewed_merges",
+                "new_merges",
+                "duplicate_merges",
+                "file_count"
+            ],
+            "properties": {
+                "unreviewed_merges": {
+                    "type": "integer"
+                },
+                "new_merges": {
+                    "type": "integer"
+                },
+                "duplicate_merges": {
+                    "type": "integer"
+                },
+                "file_count": {
+                    "type": "integer"
+                }
+            }
+        },
+        "rxcuiSchema": {
+            "required": [
+                "rxcui"
+            ],
+            "properties": {
+                "rxcui": {
+                    "type": "string"
+                }
+            }
+        },
+        "rximageSchema": {
+            "required": [
+                "replyStatus",
+                "nlmRxImages"
+            ],
+            "properties": {
+                "replyStatus": {
+                    "type": "object"
+                },
+                "nlmRxImages": {
+                    "type": "array"
+                }
+            }
+        },
+        "mednameSchema": {
+            "required": [
+                "medname"
+            ],
+            "properties": {
+                "medname": {
+                    "type": "string"
+                }
+            }
+        },
+        "RxNormSchema": {
+            "required": [
+                "idGroup"
+            ],
+            "properties": {
+                "idGroup": {
+                    "type": "object"
+                }
+            }
+        },
+        "npiSchema": {
+            "required": [
+                "searchObj"
+            ],
+            "properties": {
+                "searchObj": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+---
+# file: playbook.yml
+- include: servers.yml
