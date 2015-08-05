@@ -10,10 +10,6 @@ module.exports = function (grunt) {
     // Unified Watch Object
     var watchFiles = {
         serverJS: ['Gruntfile.js', 'server.js', 'lib/**/*.js'],
-        clientViews: ['client/app/views/**/*.html', 'client/app/index.html'],
-        clientJS: ['client/app/scripts/**/*.js'],
-        clientCSS: ['client/app/styles/*.css'],
-        clientSCSS: ['client/app/styles/{,*/}*.{scss,sass}'],
         mochaTests: ['test/unit/*.js', 'test/e2e/**/*.js', 'test/e2e/*.js'],
         oauthTests: ['test/oauth/*.js']
     };
@@ -47,11 +43,9 @@ module.exports = function (grunt) {
     });
 
     // Client tasks 
-    grunt.registerTask('build', ['jshint', 'jsbeautifier:beautify', 'clean:dist', 'wiredep', 'compass:dev']);
-    grunt.registerTask('dev', ['jshint', 'jsbeautifier:beautify', 'compass:dev', 'watch']);
-    grunt.registerTask('test', ['jshint', 'jsbeautifier:beautify', 'compass:dev', 'protractor:original_demo', 'watch']);
-    grunt.registerTask('release', ['jshint', 'jsbeautifier:beautify', 'clean:dist', 'wiredep', 'autoprefixer', 'copy:dist', 'copy:styles', 'copy:scripts', 'concurrent:dist', 'cdnify', 'uglify', 'cssmin']);
-    grunt.registerTask('travis-protractor', ['protractor:original_demo', 'protractor:medications']);
+    grunt.registerTask('build', ['jshint', 'jsbeautifier:beautify']);
+    grunt.registerTask('dev', ['jshint', 'jsbeautifier:beautify', 'watch']);
+    grunt.registerTask('test', ['jshint', 'jsbeautifier:beautify', 'watch']);
 
     // Project Configuration
     grunt.initConfig({
@@ -64,33 +58,6 @@ module.exports = function (grunt) {
             serverJS: {
                 files: watchFiles.serverJS,
                 tasks: ['jshint', 'jsbeautifier'],
-                options: {
-                    livereload: true
-                }
-            },
-            clientViews: {
-                files: watchFiles.clientViews,
-                options: {
-                    livereload: true,
-                }
-            },
-            clientJS: {
-                files: watchFiles.clientJS,
-                tasks: ['jshint', 'jsbeautifier'],
-                options: {
-                    livereload: true
-                }
-            },
-            clientCSS: {
-                files: watchFiles.clientCSS,
-                //tasks: ['csslint'],
-                options: {
-                    livereload: true
-                }
-            },
-            clientSCSS: {
-                files: watchFiles.clientSCSS,
-                tasks: ['compass:dev'],
                 options: {
                     livereload: true
                 }
@@ -142,62 +109,20 @@ module.exports = function (grunt) {
         },
         jsbeautifier: {
             beautify: {
-                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/**/*.js', '*.js', 'test/xmlmods/*.json', 'client/app/scripts/**/*.js', 'client/app/scripts/*.js', 'client/app/views/*.html', 'client/app/views/**/*.html', 'client/app/*.html'],
+                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/**/*.js', '*.js', 'test/xmlmods/*.json'],
                 options: {
                     config: '.jsbeautifyrc'
                 }
             },
             check: {
-                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/**/*.js', '*.js', 'test/xmlmods/*.json', 'client/app/scripts/**/*.js', 'client/app/scripts/*.js', 'client/app/views/*.html', 'client/app/views/**/*.html', 'client/app/*.html'],
+                src: ['Gruntfile.js', 'lib/*.js', 'lib/**/*.js', 'test/**/*.js', '*.js', 'test/xmlmods/*.json'],
                 options: {
                     mode: 'VERIFY_ONLY',
                     config: '.jsbeautifyrc'
                 }
             }
         },
-        // Empties client folders to start fresh
-        clean: {
-            dist: {
-                files: [{
-                    dot: true,
-                    src: ['client/.tmp', '<%= yeoman.dist %>/{,*/}*', '!<%= yeoman.dist %>/.git*']
-                }]
-            },
-            server: 'client/.tmp'
-        },
-        // Automatically inject Bower components into the app
-        wiredep: {
-            app: {
-                src: ['<%= yeoman.app %>/index.html'],
-                exclude: ['client/app/bower_components/bootstrap/'],
-                ignorePath: /\.\.\//
-            },
-            sass: {
-                src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                ignorePath: /(\.\.\/){1,2}app\/bower_components\//
-            }
-        },
-        //protratorjs
-        protractor: {
-            options: {
-                configFile: "client/updated_test/conf.js", // Default config file 
-                keepAlive: false,
-            },
-            medications: {
-                options: {
-                    args: {
-                        suite: 'medications'
-                    }
-                }
-            },
-            original_demo: {
-                options: {
-                    args: {
-                        suite: 'original_demo'
-                    }
-                }
-            }
-        },
+
         // Add vendor prefixed styles
         autoprefixer: {
             options: {
@@ -210,40 +135,6 @@ module.exports = function (grunt) {
                     src: '{,*/}*.css',
                     dest: 'client/.tmp/styles/'
                 }]
-            }
-        },
-        compass: { //from client
-            options: {
-                sassDir: 'client/app/styles',
-                cssDir: 'client/.tmp/styles',
-                generatedImagesDir: 'client/.tmp/images/generated',
-                imagesDir: 'client/app/images',
-                javascriptsDir: 'client/app/scripts',
-                fontsDir: 'client/app/styles/fonts',
-                importPath: 'client/app/bower_components',
-                httpImagesPath: 'client/app/images',
-                httpGeneratedImagesPath: 'client/app/images/generated',
-                httpFontsPath: 'client/app/styles/fonts',
-                relativeAssets: false,
-                assetCacheBuster: false,
-                raw: 'Sass::Script::Number.precision = 10\n'
-            },
-            dist: {
-                options: {
-                    generatedImagesDir: './client/app/images/generated'
-                }
-            },
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            },
-            dev: { // Another target
-                options: {
-                    sassDir: './client/app/styles',
-                    cssDir: './client/app/styles',
-                    debugInfo: false
-                }
             }
         },
         nodemon: {
@@ -316,67 +207,10 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/styles/main.css': [
-                        '.tmp/styles/{,*/}*.css'
-                    ]
-                }
-            }
-        },
-        // Copies remaining files to places other tasks can use
-        copy: {
-            dist: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.dist %>',
-                    src: ['*.{ico,png,txt}', '.htaccess', '*.html', 'views/{,*/}*.html', 'views/templates/{,*/}*.html', 'views/record/{,*/}*.html', 'images/{,*/}*.{webp}', 'fonts/*']
-                }, {
-                    expand: true,
-                    cwd: 'client/.tmp/images',
-                    dest: '<%= yeoman.dist %>/images',
-                    src: ['generated/*']
-                }, {
-                    expand: true,
-                    cwd: 'client',
-                    src: 'app/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-                    flatten: true,
-                    dest: '<%= yeoman.dist %>/fonts'
-                }, {
-                    expand: true,
-                    cwd: 'client',
-                    src: 'app/bower_components/font-awesome/fonts/*',
-                    flatten: true,
-                    dest: '<%= yeoman.dist %>/fonts'
-                }, {
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/bower_components',
-                    src: '**/*',
-                    dest: '<%= yeoman.dist %>/bower_components'
-                }]
-            },
-            styles: {
-                expand: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: 'client/.tmp/styles/',
-                src: '{,*/}*.css'
-            },
-            scripts: {
-                expand: true,
-                cwd: '<%= yeoman.app %>/scripts',
-                dest: 'client/.tmp/scripts/',
-                src: '{,**/}*.js'
-            }
-        },
         // Run some tasks in parallel to speed up the build process
         concurrent: {
             default: ['nodemon', 'watch'],
             test: ['env:test', 'nodemon', 'watch', 'mochaTest:test', 'mochaTest:oauthTest'],
-            server: ['compass:server'],
-            dist: ['compass:dist', 'imagemin', 'svgmin', 'htmlmin'],
             options: {
                 logConcurrentOutput: true,
                 limit: 10
