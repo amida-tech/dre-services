@@ -7,7 +7,6 @@ var assert = chai.assert;
 var expect = chai.expect;
 chai.should();
 chai.use(require('chai-things'));
-var database = require('mongodb').Db;
 
 var path = require('path');
 var common = require(path.join(__dirname, '../common/common.js'));
