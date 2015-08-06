@@ -20,25 +20,17 @@ var fs = require('fs');
 var http = require('http');
 var path = require('path');
 var app = express();
-
-var record = require('blue-button-record');
-
 var passport = require('passport');
 
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var multiparty = require('connect-multiparty');
 var methodOverride = require('method-override');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-//var multer = require('multer');
-//var errorHandler = require('errorhandler');
 var cookieParser = require('cookie-parser');
-var static = require('serve-static');
 
 module.exports = function () {
 
-    //app.use(express3.bodyParser());
     app.use(bodyParser.urlencoded({
         extended: true
     }));
@@ -133,21 +125,6 @@ module.exports = function () {
     var storage = require('../lib/storage');
     app.use(storage);
 
-    var parser = require('../lib/parser');
-    app.use(parser);
-
-    var healthRecord = require('../lib/record');
-    app.use(healthRecord);
-
-    var merges = require('../lib/merge');
-    app.use(merges);
-
-    var match = require('../lib/match');
-    app.use(match);
-
-    var notification = require('../lib/notification');
-    app.use(notification);
-
     var login = require('../lib/login');
     app.use(login);
 
@@ -159,23 +136,16 @@ module.exports = function () {
 
     var notes = require('../lib/notes');
     app.use(notes);
-    
-    var medications = require('../lib/medications');
-    app.use(medications);
-    
+
     var medapi = require('../lib/medapi');
     app.use(medapi);
     
     var npiapi = require('../lib/npiapi');
     app.use(npiapi);
 
-    var metadata = require('../lib/metadata');
-    app.use(metadata);
-    
-    var demo = require('../lib/demo');
-    app.use(demo);
-
     app.set('port', (process.env.PORT || 3000));
+
+    /*
 
     app.set('mllp_host', (process.env.PORT || '127.0.0.1'));
     app.set('mllp_port', (process.env.PORT || 6969));
@@ -183,7 +153,7 @@ module.exports = function () {
     //Launch MLLP server/listener
     var mllp = require('mllp-node');
 
-    var server = new mllp.MLLPServer('0.0.0.0', 6969);
+    var server = new mllp.MLLPServer(app.get('mllp_host'), app.get('mllp_port'));
     console.log("MLLP listening on host " + app.get('mllp_host') + ", port " + app.get('mllp_port'));
 
     server.on('hl7', function (data) {
@@ -268,6 +238,7 @@ module.exports = function () {
         });
 
     });
+    */
     return app;
 
 };
