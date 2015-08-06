@@ -32,6 +32,10 @@ To run, use `node server`
 
 `grunt` - To run Server Side tests
 
+#### Swagger API
+
+While `node server` is running, access the Swagger API documentation by going to: `http://localhost:3000/docs/` (last slash is important)
+
 ## Contributing
 
 Contributors are welcome. See issues https://github.com/amida-tech/DRE-services/issues
