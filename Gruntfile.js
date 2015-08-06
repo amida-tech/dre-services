@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     // Unified Watch Object
     var watchFiles = {
         serverJS: ['Gruntfile.js', 'server.js', 'lib/**/*.js'],
-        mochaTests: ['test/unit/*.js', 'test/e2e/**/*.js', 'test/e2e/*.js'],
+        mochaTests: ['test/e2e/**/*.js', 'test/e2e/*.js'],
         oauthTests: ['test/oauth/*.js']
     };
 

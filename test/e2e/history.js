@@ -12,18 +12,17 @@ var database = require('mongodb').Db;
 var path = require('path');
 var common = require(path.join(__dirname, '../common/common.js'));
 
-var record = require('blue-button-record');
+var record = require('../../lib/db');
 
 describe('Pre Test Cleanup', function () {
 
     before(function (done) {
         var options = {
-            dbName: process.env.DBname || 'tests',
+            dbName: process.env.DBname || 'devtests',
             supported_sections: ['allergies', 'procedures']
         };
 
         var dbinfo = record.connectDatabase('localhost', options, function (err) {
-            //assert.ifError(err);
             if (err) {
                 console.log(">>>> ", err);
             }
@@ -124,6 +123,7 @@ describe('Account History - basic', function () {
                     done();
                 } else {
                     expect(res.body).to.have.length(6);
+                    console.log(res.body);
                     (res.body).should.all.have.property('username', 'test');
                     (res.body).should.include.something.with.property('event_type', 'initAccount');
                     (res.body).should.include.something.with.property('event_type', 'loggedIn');

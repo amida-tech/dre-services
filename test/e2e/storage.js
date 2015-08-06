@@ -126,7 +126,7 @@ describe('Storage API Get List', function () {
                     expect(res.body.storage.length).to.equal(1);
                     expect(res.body.storage[0].file_name).to.equal('bluebutton-01-original.xml');
                     expect(res.body.storage[0].file_mime_type).to.equal('application/xml');
-                    expect(res.body.storage[0].file_class).to.equal('ccda');
+                    expect(res.body.storage[0].file_class).to.equal('application/xml');
                     done();
                 }
             });

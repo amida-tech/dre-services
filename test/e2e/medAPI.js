@@ -4,11 +4,9 @@ chai.config.includeStack = true;
 
 var supertest = require('supertest');
 var deploymentLocation = 'http://' + 'localhost' + ':' + '3000';
-var databaseLocation = 'mongodb://' + 'localhost' + '/' + process.env.DBname || 'tests';
 var api = supertest.agent(deploymentLocation);
 var fs = require('fs');
 var path = require('path');
-var database = require('mongodb').Db;
 var common = require(path.join(__dirname, '../common/common.js'));
 
 describe('Pre Test Cleanup', function () {

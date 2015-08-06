@@ -4,7 +4,7 @@ var Server = require('mongodb').Server;
 var path = require('path');
 var async = require('async');
 var _ = require('lodash');
-var bbMeta = require('blue-button-meta');
+//var bbMeta = require('blue-button-meta');
 
 function loadTestRecord(api, fileName, callback) {
     var filepath = path.join(__dirname, '../artifacts/test-r1.5/' + fileName);
@@ -44,7 +44,24 @@ function removeCollection(inputCollection, callback) {
 
 function removeAllCollections(callback) {
 
-    var sections = bbMeta.supported_sections;
+    var sections = [
+        'allergies',
+        'procedures',
+        'immunizations',
+        'medications',
+        'encounters',
+        'vitals',
+        'results',
+        'social_history',
+        'demographics',
+        'problems',
+        'insurance',
+        'claims',
+        'plan_of_care',
+        'payers',
+        'providers',
+        'organizations'
+    ];
 
     sections.push('plan_of_cares', 'social_histories');
 
