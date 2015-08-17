@@ -122,6 +122,15 @@ module.exports = function () {
 
     console.log("DB URL: ", app.get('db_url') + ":27017/" + app.get('db_name'));
 
+    // a middleware with no mount path; gets executed for every request to the app
+    // for more details see https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Requests_with_credentials 
+    app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin",req.get('origin') || req.get('host'));
+        //console.log(req);
+        res.header("Access-Control-Allow-Credentials", true);
+        next();
+    });
+
     var storage = require('../lib/storage');
     app.use(storage);
 
