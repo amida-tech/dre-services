@@ -40,7 +40,7 @@ module.exports = function () {
 
     //Adding CORS for Swagger UI
     app.use(function (req, res, next) {
-        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Origin", req.get('origin') || "*");
         res.header("Access-Control-Allow-Credentials", true);
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
         res.header("Access-Control-Allow-Methods", "GET, POST, PUT");
@@ -121,15 +121,6 @@ module.exports = function () {
     app.set('db_name', process.env.DBname || 'dre');
 
     console.log("DB URL: ", app.get('db_url') + ":27017/" + app.get('db_name'));
-
-    // a middleware with no mount path; gets executed for every request to the app
-    // for more details see https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Requests_with_credentials 
-    app.use(function(req, res, next) {
-        res.header("Access-Control-Allow-Origin",req.get('origin') || req.get('host'));
-        //console.log(req);
-        res.header("Access-Control-Allow-Credentials", true);
-        next();
-    });
 
     var storage = require('../lib/storage');
     app.use(storage);
