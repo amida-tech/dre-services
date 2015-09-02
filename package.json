@@ -56,7 +56,10 @@
     "rxnorm-js": "^0.1.0",
     "serve-favicon": "2.2.0",
     "serve-static": "~1.9.2",
-    "supertest": "0.15.0"
+    "supertest": "0.15.0",
+    "split": "~1.0.0",
+    "cms-fhir": "git://github.com/amida-tech/cms-fhir.git",
+    "cda-fhir": "git://github.com/amida-tech/cda-fhir.git"
   },
   "engines": {
     "node": "0.10.x"
