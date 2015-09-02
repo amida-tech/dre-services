@@ -84,8 +84,8 @@ describe('Pre Test Cleanup 2', function () {
     });
 
 });
-
-describe('Storage API', function () {
+/* Depend on presence of fhir server, so block for now */
+/*describe('Storage API', function () {
     var sampleFile = '';
 
     before(function (done) {
@@ -98,6 +98,7 @@ describe('Storage API', function () {
 
     it('File Endpoint PUT', function (done) {
         var filepath = path.join(__dirname, '../artifacts/test-r1.5/bluebutton-01-original.xml');
+        
         api.put('/api/v1/storage')
             .attach('file', filepath)
             .expect(200)
@@ -154,4 +155,4 @@ describe('Storage API Get List', function () {
             });
     });
 
-});
+});*/
