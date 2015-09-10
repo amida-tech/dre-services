@@ -1,0 +1,20 @@
+----------------------------------------------------------------
+Thu Sep 03 16:45:55 EDT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014f-94f5-67d0-000002bca808 
+on database directory /home/alex/projects/amida-tech/DRE-services/jpaserver_derby_files with class loader WebappClassLoader
+  context: /fhir
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+org.apache.catalina.loader.StandardClassLoader@7a95d502
+ 
+Loaded from file:/home/alex/bin/apache-tomcat-7.0.61/webapps/fhir/WEB-INF/lib/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_80-b15
+user.dir=/home/alex/projects/amida-tech/DRE-services
+os.name=Linux
+os.arch=amd64
+os.version=3.19.0-26-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
