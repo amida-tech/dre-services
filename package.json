@@ -59,7 +59,9 @@
     "supertest": "0.15.0",
     "split": "~1.0.0",
     "cms-fhir": "git://github.com/amida-tech/cms-fhir.git",
-    "cda-fhir": "git://github.com/amida-tech/cda-fhir.git"
+    "cda-fhir": "git://github.com/amida-tech/cda-fhir.git",
+    "ccd-fhir": "git://github.com/amida-tech/ccd-fhir.git",
+    "c32-fhir": "git://github.com/amida-tech/c32-fhir.git"
   },
   "engines": {
     "node": "0.10.x"
