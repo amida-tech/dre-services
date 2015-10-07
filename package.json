@@ -62,7 +62,7 @@
     "cda-fhir": "git://github.com/amida-tech/cda-fhir.git",
     "ccd-fhir": "git://github.com/amida-tech/ccd-fhir.git",
     "c32-fhir": "git://github.com/amida-tech/c32-fhir.git",
-    "dre-data": "~0.0.8"
+    "dre-data": "~0.0.9"
   },
   "engines": {
     "node": "0.10.x"
