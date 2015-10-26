@@ -143,6 +143,9 @@ module.exports = function () {
     var npiapi = require('../lib/npiapi');
     app.use(npiapi);
 
+    var dre = require('../lib/dre');
+    app.use(dre);
+    
     app.set('port', (process.env.PORT || 3000));
 
     /*
