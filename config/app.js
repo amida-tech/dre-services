@@ -145,6 +145,9 @@ module.exports = function () {
 
     var dre = require('../lib/dre');
     app.use(dre);
+
+    var record = require('../lib/record');
+    app.use(record);
     
     app.set('port', (process.env.PORT || 3000));
 
