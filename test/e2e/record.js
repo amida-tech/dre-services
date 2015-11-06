@@ -9,7 +9,7 @@ var deploymentLocation = 'http://localhost:3000';
 var api = supertest.agent(deploymentLocation);
 var expect = chai.expect;
 
-describe('mhr API', function () {
+xdescribe('mhr API', function () {
     before(function (done) {
         common.register(api, 'test', 'test', function (err) {
             if (err) {
@@ -36,11 +36,11 @@ describe('mhr API', function () {
             });
     });
 
-    it('rewrite', function(done) {
+    it('rewrite', function (done) {
         api.get('/api/v1/mhr')
             .expect(200)
-            .end(function(err, res) {
-                console.log(res.text);
+            .end(function (err, res) {
+                //console.log(res.text);
                 done(err);
             });
     });
