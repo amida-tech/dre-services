@@ -32,7 +32,7 @@ describe('Pre Test Cleanup', function () {
 
 // For a note on Penicillin Allergy in Allergies section
 
-describe('Notes API', function () {
+describe.skip('Notes API', function () {
 
     var tmp_note = {
         section: "allergies",
@@ -65,7 +65,7 @@ describe('Notes API', function () {
 
 });
 
-describe('Notes API Get All', function () {
+describe.skip('Notes API Get All', function () {
 
     it('Notes Endpoint: GET', function (done) {
         api.get('/api/v1/notes/all')
@@ -85,7 +85,7 @@ describe('Notes API Get All', function () {
 
 });
 
-describe('Notes API Edit', function () {
+describe.skip('Notes API Edit', function () {
 
     var tmp_edit = {
         id: "",
@@ -137,7 +137,7 @@ describe('Notes API Edit', function () {
 
 });
 
-describe('Notes API Star', function () {
+describe.skip('Notes API Star', function () {
 
     var tmp_star = {
         id: "",
@@ -189,7 +189,7 @@ describe('Notes API Star', function () {
 
 });
 
-describe('Notes API Delete', function () {
+describe.skip('Notes API Delete', function () {
 
     var tmp_delete = {
         id: ""
