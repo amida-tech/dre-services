@@ -11,7 +11,8 @@ module.exports = function (grunt) {
     var watchFiles = {
         serverJS: ['Gruntfile.js', 'server.js', 'lib/**/*.js'],
         mochaTests: ['test/e2e/**/*.js', 'test/e2e/*.js'],
-        oauthTests: ['test/oauth/*.js']
+        oauthTests: ['test/oauth/*.js'],
+        hapiTests: ['test/hapi-fhir/*.js']
     };
 
     // Making grunt default to force in order not to break the project.
@@ -21,6 +22,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['jshint', 'jsbeautifier:beautify', 'env:test', 'express:dev', 'mochaTest:test']); //need to add in 'mochaTest:oauthTest'
 
     grunt.registerTask('oauth', ['env:test', 'express:dev', 'jshint', 'mochaTest:oauthTest']);
+    
+    grunt.registerTask('hapi', ['env:test', 'express:dev', 'jshint', 'mochaTest:hapiTest']);
 
     // Not ready for use
     grunt.registerTask('coverage', ['shell:run_istanbul']);
@@ -160,6 +163,13 @@ module.exports = function (grunt) {
                     timeout: '10000'
                 },
                 src: watchFiles.oauthTests
+            },
+            hapiTest: {
+                options: {
+                    reporter: 'spec',
+                    timeout: '10000'
+                },
+                src: watchFiles.hapiTests
             }
         },
         express: {
