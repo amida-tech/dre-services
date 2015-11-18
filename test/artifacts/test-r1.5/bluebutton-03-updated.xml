@@ -1177,7 +1177,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
 							</code>
 							<!-- February 27, 2009 at 1:00PM EST -->
-							<effectiveTime value="2009027130000+0500"/>
+							<effectiveTime value="20090207130000+0500"/>
 							<performer>
 								<assignedEntity>
 									<!-- Provider NPI "PseduoMD-3" -->
