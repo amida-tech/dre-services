@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['jshint', 'jsbeautifier:beautify', 'env:test', 'express:dev', 'mochaTest:test']); //need to add in 'mochaTest:oauthTest'
 
     grunt.registerTask('oauth', ['env:test', 'express:dev', 'jshint', 'mochaTest:oauthTest']);
-    
+
     grunt.registerTask('hapi', ['env:test', 'express:dev', 'jshint', 'mochaTest:hapiTest']);
 
     // Not ready for use
