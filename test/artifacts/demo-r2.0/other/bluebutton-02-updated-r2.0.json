@@ -1,0 +1,4147 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Composition/46",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "Organization/2"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/3"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/4"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/5"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/6"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/7"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Encounter/8"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/9"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Location/10"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Encounter/11"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/12"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Location/13"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "FamilyMemberHistory/14"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ClinicalImpression/15"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/16"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ClinicalImpression/17"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/18"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Immunization/19"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/20"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/21"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/22"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Immunization/23"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/24"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/25"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/26"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Immunization/27"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/28"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/29"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/30"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Immunization/31"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/32"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/33"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/34"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Device/35"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Device/36"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Device/37"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationOrder/38"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationAdministration/39"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Medication/40"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/41"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationOrder/42"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationAdministration/43"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Medication/44"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/45"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Medication/46"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationOrder/47"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "MedicationAdministration/48"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Medication/49"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/50"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/51"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/52"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/53"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Medication/54"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/55"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/56"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Claim/57"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Coverage/58"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/59"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "CarePlan/60"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ProcedureRequest/61"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ProcedureRequest/62"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ProcedureRequest/63"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ProcedureRequest/64"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "ClinicalImpression/65"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/66"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/67"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Condition/68"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Procedure/69"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/70"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Procedure/71"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/72"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/73"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Device/74"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Procedure/75"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Practitioner/76"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Organization/77"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Device/78"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Location/79"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/80"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/81"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/82"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/83"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/84"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/85"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/86"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/87"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/88"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/89"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/90"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/91"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/92"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/93"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/94"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/95"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/96"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/97"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/98"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/99"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/100"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/101"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/102"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/103"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/104"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/105"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/106"
+              }
+            ]
+          },
+          {
+            "entry": [
+              {
+                "reference": "Observation/107"
+              }
+            ]
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34133-9",
+              "display": "Summarization of Episode Note"
+            },
+            {
+              "system": "LOINC",
+              "code": "34133-9"
+            }
+          ]
+        },
+        "title": "Community Health and Hospitals: Health Summary",
+        "subject": {
+          "reference": "Patient/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient/1",
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+            "value": "998991"
+          },
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.1",
+            "value": "111-00-2330"
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "1357 Amber Drive"
+            ],
+            "city": "Beaverton",
+            "state": "OR",
+            "postalCode": "97867",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home",
+            "system": "phone",
+            "value": "(816)276-6909"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "Isabella",
+              "Isa"
+            ],
+            "family": [
+              "Jones"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-05-01",
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.2",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.5.1076",
+                  "code": "1013",
+                  "display": "Christian (non-Catholic, non-specific)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/birthPlace",
+            "valueAddress": {
+              "city": "Beaverton",
+              "state": "OR",
+              "postalCode": "97867",
+              "country": "US"
+            }
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.5.111",
+                    "code": "PRN",
+                    "display": "Parent"
+                  }
+                ]
+              }
+            ],
+            "address": {
+              "line": [
+                "1357 Amber Drive"
+              ],
+              "city": "Beaverton",
+              "state": "OR",
+              "postalCode": "97867",
+              "country": "US"
+            },
+            "telecom": [
+              {
+                "use": "home",
+                "system": "phone",
+                "value": "(816)276-6909"
+              }
+            ],
+            "name": [
+              {
+                "given": [
+                  "Ralph"
+                ],
+                "family": [
+                  "Jones"
+                ]
+              }
+            ]
+          },
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.5.111",
+                    "code": "GUAR"
+                  }
+                ]
+              }
+            ],
+            "address": [
+              {
+                "use": "home",
+                "line": [
+                  "17 Daws Rd."
+                ],
+                "city": "Blue Bell",
+                "state": "MA",
+                "postalCode": "02368",
+                "country": "US"
+              }
+            ],
+            "telecom": [
+              {
+                "use": "home",
+                "system": "phone",
+                "value": "(781)555-1212"
+              }
+            ],
+            "name": {
+              "given": [
+                "Adam",
+                "Frankie"
+              ],
+              "family": [
+                "Everyman"
+              ]
+            }
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "code": "en"
+                }
+              ]
+            },
+            "preferred": "true"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/2"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/2",
+        "name": "Community Health and Hospitals",
+        "telecom": [
+          {
+            "use": "work",
+            "system": "phone",
+            "value": " 555-555-5000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1001 Village Avenue"
+            ],
+            "city": "Portland",
+            "state": "OR",
+            "postalCode": "99123",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "AllergyIntolerance/3",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "Inactive",
+        "lastOccurence": "2007-05-01",
+        "reaction": [
+          {
+            "onset": "2007-05-01",
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "422587007",
+                    "display": "Nausea"
+                  }
+                ]
+              }
+            ],
+            "severity": "severe"
+          }
+        ],
+        "category": "medication",
+        "substance": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "314422",
+              "display": "ALLERGENIC EXTRACT, PENICILLIN"
+            }
+          ]
+        },
+        "criticality": "CRITH"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "AllergyIntolerance/4",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "Active",
+        "lastOccurence": "2006-05-01",
+        "reaction": [
+          {
+            "onset": "2006-05-01",
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "56018004",
+                    "display": "Wheezing"
+                  }
+                ]
+              }
+            ],
+            "severity": "moderate"
+          }
+        ],
+        "category": "medication",
+        "substance": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2670",
+              "display": "Codeine"
+            }
+          ]
+        },
+        "criticality": "CRITL"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "AllergyIntolerance/5",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "Inactive",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "422587007",
+                    "display": "Nausea"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "type": "allergy",
+        "category": "food",
+        "substance": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/ndfrt",
+              "code": "291P45F896",
+              "display": "Eggs"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.2",
+              "code": "V15.03",
+              "display": "Allergy to eggs"
+            }
+          ]
+        },
+        "criticality": "CRITU"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "AllergyIntolerance/6",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "Active",
+        "lastOccurence": "2008-05-01",
+        "reaction": [
+          {
+            "onset": "2008-05-01",
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "247472004",
+                    "display": "Hives"
+                  }
+                ]
+              }
+            ],
+            "severity": "moderate"
+          }
+        ],
+        "type": "intolerance",
+        "category": "medication",
+        "substance": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1191",
+              "display": "Aspirin"
+            }
+          ]
+        },
+        "criticality": "CRITL"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "AllergyIntolerance/7",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "Inactive",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "422587007",
+                    "display": "Nausea"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "type": "allergy",
+        "category": "medication",
+        "substance": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "866041",
+              "display": "Neomycin Sulfate 500 MG"
+            }
+          ]
+        },
+        "criticality": "CRITU"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter/8",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.3.4"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99231",
+                "display": "UNK"
+              }
+            ]
+          }
+        ],
+        "participant": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "ATND",
+                  "display": "attender"
+                }
+              ]
+            },
+            "individual": {
+              "reference": "Practitioner/9"
+            }
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "reference": "Location/10"
+            }
+          }
+        ],
+        "reason": [
+          {
+            "coding": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/9",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.4.6"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1002 Healthcare Dr."
+            ],
+            "city": "Portland",
+            "state": "OR",
+            "postalCode": "97005",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1-(555)555-1122"
+          }
+        ],
+        "name": {
+          "family": [
+            "Rodriguez"
+          ],
+          "given": [
+            "Martin"
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location/10",
+        "type": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.259",
+              "code": "1061-1",
+              "display": "Inpatient Medical/Surgical Ward"
+            }
+          ]
+        },
+        "address": {
+          "line": [
+            "1000 Hospital Way"
+          ],
+          "city": "Portland",
+          "state": "OR",
+          "postalCode": "97005",
+          "country": "US"
+        },
+        "name": "Local Community Hospital"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter/11",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "2a620155-9d11-439e-92b3-5d9815ff4de8"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office outpatient visit 15 minutes"
+              },
+              {
+                "system": "urn:oid:2.16.840.1.113883.5.4",
+                "code": "AMB",
+                "display": "Ambulatory"
+              }
+            ]
+          }
+        ],
+        "period": {
+          "start": "2009-02-27T13:00:00",
+          "end": "2009-02-27T13:00:00"
+        },
+        "participant": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v3/ParticipationType",
+                  "code": "ATND",
+                  "display": "attender"
+                }
+              ]
+            },
+            "individual": {
+              "reference": "Practitioner/12"
+            }
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "reference": "Location/13"
+            }
+          }
+        ],
+        "reason": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "233604007",
+                "display": "Pneumonia"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/12",
+        "identifier": [
+          {
+            "value": "PseduoMD-3"
+          }
+        ],
+        "practitionerRole": [
+          {
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "59058001",
+                    "display": "General Physician"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location/13",
+        "type": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.259",
+              "code": "1160-1",
+              "display": "Urgent Care Center"
+            }
+          ]
+        },
+        "address": {
+          "line": [
+            "17 Daws Rd."
+          ],
+          "city": "Blue Bell",
+          "state": "MA",
+          "postalCode": "02368",
+          "country": "US"
+        },
+        "name": "Community Urgent Care Center"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "FamilyMemberHistory/14",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.5.111",
+                "code": "FTH",
+                "display": "Father"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "bornDate": "1910",
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "22298006",
+                  "display": "Myocardial infarction"
+                }
+              ]
+            },
+            "outcome": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "419099009",
+                  "display": "Dead"
+                }
+              ]
+            },
+            "onsetQuantity": {
+              "value": 57,
+              "unit": "a",
+              "system": "http://snomed.info/sct",
+              "code": "445518008"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "44054006",
+                  "display": "Diabetes mellitus type 2"
+                }
+              ]
+            },
+            "onsetQuantity": {
+              "value": 40,
+              "unit": "a",
+              "system": "http://snomed.info/sct",
+              "code": "445518008"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "ClinicalImpression/15",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "investigations": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "160237006",
+                  "display": "History/symptoms"
+                }
+              ]
+            },
+            "item": [
+              {
+                "reference": "Observation/16"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/16",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6b5a04b-2bf4-49d1-8336-636a3813df0a"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57251-1",
+              "display": "Ambulation"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2009-03-11T12:30:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371153006",
+              "display": "Independently able"
+            }
+          ]
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "B"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "ClinicalImpression/17",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "investigations": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "160237006",
+                  "display": "History/symptoms"
+                }
+              ]
+            },
+            "item": [
+              {
+                "reference": "Observation/18"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/18",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6b5a04b-2bf4-49d1-8336-636a3813df0a"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "373930000",
+              "display": "Cognitive function finding"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2009-03-11T12:30:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "61372001",
+              "display": "Aggressive behavior"
+            }
+          ]
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "HH"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "Non Aggressive to Aggressive"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Immunization/19",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "date": "1999-11",
+        "route": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+              "code": "C28161",
+              "display": "Intramuscular injection"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 50,
+          "unit": "mcg"
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
+              "code": "88",
+              "display": "Influenza virus vaccine"
+            }
+          ]
+        },
+        "lotNumber": "1",
+        "manufacturer": {
+          "reference": "Organization/20"
+        },
+        "performer": {
+          "reference": "Practitioner/21"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/20",
+        "name": "Health LS - Immuno Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/21",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5.9999.456"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1021 Health Drive"
+            ],
+            "city": "Ann Arbor",
+            "state": "MI",
+            "postalCode": "99099",
+            "country": "US"
+          }
+        ],
+        "name": {
+          "given": [
+            "Amanda"
+          ],
+          "family": [
+            "Assigned"
+          ]
+        },
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/22",
+        "name": "Good Health Clinic"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Immunization/23",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "wasNotGiven": true,
+        "date": "1998-12-15",
+        "route": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+              "code": "C28161",
+              "display": "Intramuscular injection"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 50,
+          "unit": "mcg"
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
+              "code": "88",
+              "display": "Influenza virus vaccine"
+            }
+          ]
+        },
+        "lotNumber": "1",
+        "manufacturer": {
+          "reference": "Organization/24"
+        },
+        "performer": {
+          "reference": "Practitioner/25"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/24",
+        "name": "Health LS - Immuno Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/25",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5.9999.456"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1021 Health Drive"
+            ],
+            "city": "Ann Arbor",
+            "state": "MI",
+            "postalCode": "99099",
+            "country": "US"
+          }
+        ],
+        "name": {
+          "given": [
+            "Amanda"
+          ],
+          "family": [
+            "Assigned"
+          ]
+        },
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/26"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/26",
+        "name": "Good Health Clinic"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Immunization/27",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "date": "1998-12-15",
+        "route": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+              "code": "C28161",
+              "display": "Intramuscular injection"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 50,
+          "unit": "mcg"
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
+              "code": "33",
+              "display": "Pneumococcal polysaccharide vaccine"
+            }
+          ]
+        },
+        "lotNumber": "1",
+        "manufacturer": {
+          "reference": "Organization/28"
+        },
+        "performer": {
+          "reference": "Practitioner/29"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/28",
+        "name": "Health LS - Immuno Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/29",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5.9999.456"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1021 Health Drive"
+            ],
+            "city": "Ann Arbor",
+            "state": "MI",
+            "postalCode": "99099",
+            "country": "US"
+          }
+        ],
+        "name": {
+          "given": [
+            "Amanda"
+          ],
+          "family": [
+            "Assigned"
+          ]
+        },
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/30"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/30",
+        "name": "Good Health Clinic"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Immunization/31",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "wasNotGiven": true,
+        "date": "1998-12-15",
+        "route": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+              "code": "C28161",
+              "display": "Intramuscular injection"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 50,
+          "unit": "mcg"
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
+              "code": "103",
+              "display": "Tetanus and diphtheria toxoids - preservative free"
+            }
+          ]
+        },
+        "lotNumber": "1",
+        "manufacturer": {
+          "reference": "Organization/32"
+        },
+        "performer": {
+          "reference": "Practitioner/33"
+        },
+        "explanation": {
+          "reasonNotGiven": [
+            {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.5.8",
+                  "code": "PATOBJ",
+                  "display": "Patient Objection"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/32",
+        "name": "Health LS - Immuno Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/33",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5.9999.456"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1021 Health Drive"
+            ],
+            "city": "Ann Arbor",
+            "state": "MI",
+            "postalCode": "99099",
+            "country": "US"
+          }
+        ],
+        "name": {
+          "given": [
+            "Amanda"
+          ],
+          "family": [
+            "Assigned"
+          ]
+        },
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/34"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/34",
+        "name": "Good Health Clinic"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device/35",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "available",
+        "identifier": [
+          {
+            "value": "2413773c-2372-4299-bbe6-5b0f60664489"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "72506001",
+              "display": "Automatic implantable cardioverter/defibrillator"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device/36",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "available",
+        "identifier": [
+          {
+            "value": "eb936010-7b17-11db-9fe1-0800200c9a68"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "304120007",
+              "display": "Total hip replacement prosthesis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device/37",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "status": "available",
+        "identifier": [
+          {
+            "value": "eb936010-7b17-11db-9fe1-0800200c9a68"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "58938008",
+              "display": "Wheelchair"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationOrder",
+        "id": "MedicationOrder/38",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "period": "12",
+                "periodUnits": "h"
+              }
+            }
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/40"
+        },
+        "reasonReference": {
+          "reference": "Condition/41"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "MedicationAdministration/39",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "prescription": {
+          "reference": "MedicationOrder/38"
+        },
+        "dosage": {
+          "method": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                "code": "C42986",
+                "display": "SOLUTION"
+              }
+            ]
+          }
+        },
+        "status": "completed",
+        "effectiveTimePeriod": {
+          "start": "2012-10-02"
+        },
+        "medicationReference": {
+          "reference": "Medication/40"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "Medication/40",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "329646",
+              "display": "Cefepime"
+            }
+          ],
+          "text": "Cefepime"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/41",
+        "patient": {
+          "reference": "Patient/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationOrder",
+        "id": "MedicationOrder/42",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "period": "6",
+                "periodUnits": "h"
+              }
+            }
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/46"
+        },
+        "reasonReference": {
+          "reference": "Condition/45"
+        },
+        "status": "completed"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "MedicationAdministration/43",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "prescription": {
+          "reference": "MedicationOrder/42"
+        },
+        "dosage": {
+          "quantity": {
+            "value": 1
+          },
+          "method": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                "code": "C42998",
+                "display": "TABLET"
+              }
+            ]
+          }
+        },
+        "status": "completed",
+        "effectiveTimePeriod": {
+          "start": "2012-09-20"
+        },
+        "medicationReference": {
+          "reference": "Medication/44"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "Medication/44",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "309114",
+              "display": "Cephalexin 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Cephalexin 500 MG Oral Tablet"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/45",
+        "patient": {
+          "reference": "Patient/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "Medication/46",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "309114",
+              "display": "Cephalexin 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Cephalexin 500 MG Oral Tablet"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationOrder",
+        "id": "MedicationOrder/47",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "period": "6",
+                "periodUnits": "h"
+              }
+            }
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/54"
+        },
+        "reasonReference": {
+          "reference": "Condition/53"
+        },
+        "status": "completed",
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2007-01-03"
+          },
+          "numberOfRepeatsAllowed": 1,
+          "quantity": {
+            "value": 75
+          }
+        },
+        "prescriber": {
+          "reference": "Practitioner/56"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "MedicationAdministration/48",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "prescription": {
+          "reference": "MedicationOrder/47"
+        },
+        "dosage": {
+          "route": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                "code": "C38216",
+                "display": "RESPIRATORY (INHALATION)"
+              }
+            ]
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "mg/actuat"
+          },
+          "rateRatio": {
+            "numerator": {
+              "value": 90,
+              "unit": "ml/min"
+            },
+            "denominator": {
+              "value": 1
+            }
+          },
+          "method": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                "code": "C42944",
+                "display": "INHALANT"
+              }
+            ]
+          }
+        },
+        "status": "completed",
+        "effectiveTimePeriod": {
+          "start": "2007-01-03",
+          "end": "2012-05-15"
+        },
+        "medicationReference": {
+          "reference": "Medication/49"
+        },
+        "practitioner": {
+          "reference": "Practitioner/51"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "Medication/49",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "219483",
+              "display": "Proventil HFA"
+            }
+          ],
+          "text": "Proventil HFA"
+        },
+        "manufacturer": {
+          "reference": "Organization/50"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/50",
+        "name": "Medication Factory Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/51",
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/52"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/52",
+        "name": "Community Health and Hospitals"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/53",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "404684003",
+              "display": "Finding"
+            }
+          ]
+        },
+        "onsetPeriod": {
+          "start": "2007-01-03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "233604007",
+              "display": "Pneumonia"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "Medication/54",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "573621",
+              "display": "Proventil 0.09 MG/ACTUAT inhalant solution"
+            }
+          ],
+          "text": "Proventil 0.09 MG/ACTUAT inhalant solution"
+        },
+        "manufacturer": {
+          "reference": "Organization/55"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/55",
+        "name": "Medication Factory Inc."
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/56",
+        "identifier": [
+          {
+            "value": "2a620155-9d11-439e-92b3-5d9815fe4de8"
+          }
+        ],
+        "name": {
+          "given": [
+            "Henry"
+          ],
+          "family": [
+            "Seven"
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "id": "Claim/57",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "coverage": [
+          {
+            "sequence": 1,
+            "coverage": {
+              "reference": "Coverage/58"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "14d4a520-7aae-11db-9fe1-0800200c9a66"
+          },
+          {
+            "value": "2.16.840.1.113883.19"
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "service": {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Coverage/58",
+        "subscriber": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19"
+          }
+        ],
+        "issuer": {
+          "reference": "Organization/59"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/59",
+        "name": "Good Health Insurance",
+        "telecom": [
+          {
+            "use": "work",
+            "system": "phone",
+            "value": "(781)555-1515"
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "123 Insurance\n\t\t\t\t\t\t\t\t\t\t\t\tRoad"
+            ],
+            "city": "Blue Bell",
+            "state": "MA",
+            "postalCode": "02368",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "CarePlan/60",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "activity": [
+          {
+            "reference": {
+              "reference": "ProcedureRequest/61"
+            }
+          },
+          {
+            "reference": {
+              "reference": "ProcedureRequest/62"
+            }
+          },
+          {
+            "reference": {
+              "reference": "ProcedureRequest/63"
+            }
+          },
+          {
+            "reference": {
+              "reference": "ProcedureRequest/64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "ProcedureRequest/61",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        },
+        "status": "new",
+        "scheduledDateTime": "2012-05-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "ProcedureRequest/62",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        },
+        "status": "new",
+        "scheduledDateTime": "2012-05-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "ProcedureRequest/63",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        },
+        "status": "new",
+        "scheduledDateTime": "2012-05-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ProcedureRequest",
+        "id": "ProcedureRequest/64",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        },
+        "status": "new",
+        "scheduledDateTime": "2012-05-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "ClinicalImpression/65",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "problem": [
+          {
+            "reference": "Condition/66"
+          },
+          {
+            "reference": "Condition/67"
+          },
+          {
+            "reference": "Condition/68"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/66",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.1"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.1"
+          }
+        ],
+        "code": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "36971009",
+            "display": "Sinusitis"
+          }
+        },
+        "clinicalStatus": "Active",
+        "onsetPeriod": {
+          "start": "2012-09-20"
+        },
+        "category": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "55607006",
+            "display": "Problem"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/67",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"
+          }
+        ],
+        "code": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "233604007",
+            "display": "Pneumonia"
+          }
+        },
+        "clinicalStatus": "Resolved",
+        "category": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "409586006",
+            "display": "Complaint"
+          }
+        },
+        "onsetQuantity": {
+          "value": 57,
+          "unit": "a",
+          "system": "http://snomed.info/sct",
+          "code": "445518008"
+        },
+        "onsetDateTime": "2008-01-03"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition/68",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"
+          }
+        ],
+        "code": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "195967001",
+            "display": "Asthma"
+          }
+        },
+        "clinicalStatus": "Active",
+        "onsetPeriod": {
+          "start": "2007-01-03",
+          "end": "2008-01-03"
+        },
+        "category": {
+          "coding": {
+            "system": "http://snomed.info/sct",
+            "code": "409586006",
+            "display": "Complaint"
+          }
+        },
+        "onsetQuantity": {
+          "value": 57,
+          "unit": "a",
+          "system": "http://snomed.info/sct",
+          "code": "445518008"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "Procedure/69",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.7"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241526005",
+              "display": "Sinus CT"
+            }
+          ]
+        },
+        "status": "active",
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "82094008",
+                "display": "Lower Respiratory Tract Structure"
+              }
+            ]
+          }
+        ],
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/70"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/70",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.4.6"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1002 Healthcare Dr."
+            ],
+            "city": "Portland",
+            "state": "OR",
+            "postalCode": "97005",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1-(555)555-1122"
+          }
+        ],
+        "name": {
+          "family": [
+            "Rodriguez"
+          ],
+          "given": [
+            "Martin"
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "Procedure/71",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "d68b7e32-7810-4f5b-9cc2-acd54b0fd85d"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        },
+        "status": "completed",
+        "performedDateTime": "2012-05-12",
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.3.88.12.3221.8.9",
+                "code": "appropriate_code",
+                "display": "colon"
+              }
+            ]
+          }
+        ],
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/72"
+            }
+          }
+        ],
+        "used": [
+          {
+            "reference": "Device/74"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/72",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5.9999.456"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1001 Village Avenue"
+            ],
+            "city": "Portland",
+            "state": "OR",
+            "postalCode": "99123",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "use": "work",
+            "value": "555-555-5000"
+          }
+        ],
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/73"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/73",
+        "name": "Community Health and Hospitals",
+        "telecom": [
+          {
+            "use": "work",
+            "value": "555-555-5000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1001 Village\n\t\t\t\t\t\t\t\t\t\t\t\tAvenue"
+            ],
+            "city": "Portland",
+            "state": "OR",
+            "postalCode": "99123",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device/74",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "742aee30-21c5-11e1-bfc2-0800200c9a66"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "90412006",
+              "display": "Colonoscope"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "Procedure/75",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "274025005",
+              "display": "Colonic polypectomy"
+            }
+          ]
+        },
+        "status": "aborted",
+        "performedDateTime": "2011-02-03",
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "416949008",
+                "display": "Abdomen and pelvis"
+              }
+            ]
+          }
+        ],
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/76"
+            }
+          }
+        ],
+        "used": [
+          {
+            "reference": "Device/78"
+          }
+        ],
+        "location": {
+          "reference": "Location/79"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner/76",
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19.5"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "17 Daws Rd."
+            ],
+            "city": "Blue Bell",
+            "state": "MA",
+            "postalCode": "02368",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "use": "work",
+            "value": "(555)555-555-1234"
+          }
+        ],
+        "practitionerRole": [
+          {
+            "managingOrganization": {
+              "reference": "Organization/77"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization/77",
+        "name": "Community Health and Hospitals"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device/78",
+        "patient": {
+          "reference": "Patient/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location/79",
+        "type": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.259",
+              "code": "1118-9",
+              "display": "Gastroenterology Clinic"
+            }
+          ]
+        },
+        "address": {
+          "line": [
+            "17 Daws Rd."
+          ],
+          "city": "Blue Bell",
+          "state": "MA",
+          "postalCode": "02368",
+          "country": "US"
+        },
+        "name": "Community Gastroenterology Clinic"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/80",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1331eea1-3efe-497e-96bc-de56796a253d"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3",
+              "display": "Thyrotropin [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "6",
+          "unit": "m[IU]/L"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "HH",
+              "display": "high alert"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "normal: 0.29–5.11 IU/ml"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/81",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "dc16a671-c8f7-4125-a3f6-c8787606f576"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "8",
+          "unit": "%"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "HH",
+              "display": "high alert"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "normal: 4.0-5.6%"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/82",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "9cd43fa7-db31-4c29-ab30-83f92fdcaa20"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "1.5",
+          "unit": "mg/dL"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "A",
+              "display": "abnormal"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "normal: below 1.5 mg/dL"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/83",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "78df60b1-daf7-4838-b509-ec3a3f4116c1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR in Platelet poor plasma by Coagulation assay"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "1.5",
+          "unit": "1"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "HH",
+              "display": "high alert"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "Normal reference range 1.0-1.5; Targeted INR 2.0-3.0"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/84",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "aaa00f9e-0154-4eaa-be85-aeb34169f06a"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18041-4",
+              "display": "Aortic valve Ejection [Time] by US.doppler"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "55",
+          "unit": "%"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N",
+              "display": "normal"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "Normal: 50-75%"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/85",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "347f958c-9b6b-4eeb-848d-624567117cb7"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18089-3",
+              "display": "AV Orifice Area US"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueQuantity": {
+          "value": "1.5",
+          "unit": "cm2"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "A",
+              "display": "abnormal"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "Normal (3.0-4.0 cm2), mild (1.5–2.0 cm2), moderate (1.0–1.5 cm2), severe (less than 1.0 cm2)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/86",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "ba4f85fa-586c-4898-9aad-b592d4c2c383"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18844-1",
+              "display": "EKG impression Narrative"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-11-26",
+        "valueString": "EKG rate 60s, A fib, LBBB"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/87",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "107c2dc0-67a5-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30313-1",
+              "display": "HGB"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-03-23T14:30:00",
+        "valueQuantity": {
+          "value": "13.2",
+          "unit": "g/dl"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "text": "M 13-18 g/dl; F 12-16 g/dl"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/88",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "107c2dc0-67a5-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33765-9",
+              "display": "WBC"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-03-23T14:30:00",
+        "valueQuantity": {
+          "value": "6.7",
+          "unit": "10+3/ul"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": "4.3",
+              "unit": "10+3/ul"
+            },
+            "high": {
+              "value": "10.8",
+              "unit": "10+3/ul"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/89",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "107c2dc0-67a5-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7",
+              "display": "PLT"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-03-23T14:30:00",
+        "valueQuantity": {
+          "value": "123",
+          "unit": "10+3/ul"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "L"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": "150",
+              "unit": "10+3/ul"
+            },
+            "high": {
+              "value": "350",
+              "unit": "10+3/ul"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/90",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "2.16.840.1.113883.19"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.4",
+              "code": "ASSERTION"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectivePeriod": {
+          "start": "2005-05-01",
+          "end": "2009-02-27T13:00:00"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "8517006",
+              "display": "Former smoker"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/91",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "9b56c25d-9104-45ee-9fa4-e0f3afaa01c1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "229819007",
+              "display": "Tobacco use and exposure"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectivePeriod": {
+          "start": "2005-05-01",
+          "end": "2009-02-27T13:00:00"
+        },
+        "valueString": "1 pack per day"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/92",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "45efb604-7049-4a2e-ad33-d38556c9636c"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "229819007",
+              "display": "Tobacco use and exposure"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectivePeriod": {
+          "start": "2009-02-27T13:00:00"
+        },
+        "valueString": "None"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/93",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "37f76c51-6411-4e1d-8a37-957fd49d2cef"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160573003",
+              "display": "Alcohol consumption"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectivePeriod": {
+          "start": "2005-05-01"
+        },
+        "valueString": "None"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/94",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Height"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-10-02",
+        "valueQuantity": {
+          "value": "70",
+          "unit": "[in_us]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/95",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Weight"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-10-02",
+        "valueQuantity": {
+          "value": "160",
+          "unit": "[lb_av]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/96",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "BP Systolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-10-02",
+        "valueQuantity": {
+          "value": "120",
+          "unit": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/97",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "BP Diastolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-10-02",
+        "valueQuantity": {
+          "value": "78",
+          "unit": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/98",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          },
+          {
+            "value": "1.3.6.1.4.1.22812.3.99930.3.4.6"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body Mass Index Calculated"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2012-10-02",
+        "valueQuantity": {
+          "value": "27.5",
+          "unit": "1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/99",
+        "subject": {
+          "reference": "Patient/1"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/100",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Height"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "1999-11-14",
+        "valueQuantity": {
+          "value": "177",
+          "unit": "cm"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/101",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Patient Body Weight - Measured"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "1999-11-14",
+        "valueQuantity": {
+          "value": "86",
+          "unit": "kg"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/102",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Intravascular Systolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "1999-11-14",
+        "valueQuantity": {
+          "value": "132",
+          "unit": "mm[Hg]"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/103",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Intravascular Diastolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "1999-11-14",
+        "valueQuantity": {
+          "value": "80",
+          "unit": "mm[Hg]"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/104",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Height"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-04-07",
+        "valueQuantity": {
+          "value": "177",
+          "unit": "cm"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/105",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Patient Body Weight - Measured"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-04-07",
+        "valueQuantity": {
+          "value": "90",
+          "unit": "kg"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/106",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Intravascular Systolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-04-07",
+        "valueQuantity": {
+          "value": "145",
+          "unit": "mm[Hg]"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Observation/107",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "identifier": [
+          {
+            "value": "c6f88321-67ad-11db-bd13-0800200c9a66"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Intravascular Diastolic"
+            }
+          ]
+        },
+        "status": "completed",
+        "effectiveDateTime": "2000-04-07",
+        "valueQuantity": {
+          "value": "88",
+          "unit": "mm[Hg]"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.83",
+              "code": "N"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "id": "urn:hl7ii:2.16.840.1.113883.19.5.99999.1:TT988"
+}
