@@ -58,12 +58,12 @@
     "serve-static": "~1.9.2",
     "supertest": "0.15.0",
     "split": "~1.0.0",
-    "cms-fhir": "git://github.com/amida-tech/cms-fhir.git",
-    "cda-fhir": "git://github.com/amida-tech/cda-fhir.git",
-    "ccd-fhir": "git://github.com/amida-tech/ccd-fhir.git",
-    "c32-fhir": "git://github.com/amida-tech/c32-fhir.git",
+    "cms-fhir": "~0.9.2",
+    "cda-fhir": "~0.9.5",
+    "c32-fhir": "~0.9.3",
+    "ccd-fhir": "~0.9.2",
     "dre-data": "~0.0.16",
-    "fhir2ccda": "git://github.com/amida-tech/fhir2ccda.git"
+    "fhir2ccda": "~0.0.2"
 
   },
   "engines": {
