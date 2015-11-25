@@ -38,5 +38,6 @@ COPY . /src
 EXPOSE 3000
 
 # Run the app
-CMD ["node", "/src/server.js"]
+WORKDIR "/src"
+CMD ["node", "server.js"]
 
