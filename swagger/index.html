@@ -27,8 +27,10 @@
       var url = window.location.search.match(/url=([^&]+)/);
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
+        console.log("URL from if "+url)
       } else {
         url = "/docs/spec/dre-api.json";
+        console.log("URL from else "+url)
       }
       window.swaggerUi = new SwaggerUi({
         url: url,

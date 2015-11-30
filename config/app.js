@@ -49,7 +49,7 @@ module.exports = function () {
 
     //to prevent caching of API calls
     app.disable('etag');
-
+    
     app.use('/docs', express.static('./swagger'));
 
     app.engine('html', require('ejs').renderFile);
@@ -60,35 +60,6 @@ module.exports = function () {
     app.use('/api/v1/storage', multiparty());
 
     var redisStore = require('connect-redis')(session); //uncomment for Redis session support during development
-
-    //to run fully built UI use this line (run "grunt build" in /client first)
-    //app.set('client_location', path.resolve(__dirname, '../client/dist'));
-
-    //to run development version of UI use this line
-    app.set('client_location', path.resolve(__dirname, '../client/app'));
-
-    //app.set('client_location', path.resolve(__dirname, '../phr-prototype/dist'));
-
-    //app.use(express.favicon(config.client.location + '/favicon.ico'));
-    app.use(express.static(app.get('client_location')));
-    app.use(function (req, res, next) {
-        var requestPath = '';
-        if (req.path.substring(req.path.length - 1) === '/') {
-            requestPath = req.path.substring(0, req.path.length - 1);
-        } else {
-            requestPath = req.path;
-        }
-        var viewPath = app.get('client_location') + requestPath + '.html';
-        fs.exists(viewPath, function (exists) {
-            //console.log(viewPath);
-            if (exists) {
-                res.header("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-                res.render(viewPath);
-            } else {
-                next();
-            }
-        });
-    });
 
     /*      Porting notes from express 3: Item 1 was what it was before, 2s are
             equivalent versions from previous express 3 versions */
@@ -103,7 +74,7 @@ module.exports = function () {
         resave: true,
         saveUninitialized: true,
         store: new redisStore({
-                host: '0.0.0.0',
+                host: process.env.DB_PORT_6379_TCP_ADDR || '0.0.0.0',
                 port: 6379,
                 prefix: 'chs-sess'
             }) //uncomment for Redis session support during development
@@ -117,7 +88,7 @@ module.exports = function () {
     //var databaseServer = process.env.DB || 'mongodb://localhost:27017';
     //var databaseServer = process.env.DB || 'localhost:27017';
 
-    app.set('db_url', process.env.DB || 'localhost');
+    app.set('db_url', process.env.MONGO_PORT_27017_TCP_ADDR || 'localhost');
     app.set('db_name', process.env.DBname || 'dre');
 
     console.log("DB URL: ", app.get('db_url') + ":27017/" + app.get('db_name'));
