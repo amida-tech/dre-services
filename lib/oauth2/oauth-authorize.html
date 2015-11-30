@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+		crossorigin="anonymous">
+		<style>
+			body {
+				background: rgb(75, 70, 83);
+				margin: 15px;
+			}
+			
+		label,p {
+			color: white;
+		}
+		</style>
+
+		<head>
+
+			<body>
+				<div class="container">
+					<img src="http://dre2.amida-demo.com:3000/images/bb-logo-vector.png" class="img-circle center-block">
+				<p>Hi
+					<%= user.name %>!</p>
+				<p><b><%= client.name %></b> is requesting access to your account.</p>
+				<p>Do you approve?</p>
+				<form action="/oauth2/decision" method="post" role="form" class="form-horizontal">
+					<div class="form-group">
+						<input name="transaction_id" type="hidden" value="<%= transactionID %>">
+					</div>
+					<div class="form-group">
+					<div class="col-sm-6">
+							<input type="submit" value="Allow" id="allow" class="btn btn-warning btn-block">
+					</div>
+					<div>
+					</div>
+					<div class="col-sm-6">
+							<input type="submit" value="Deny" name="cancel" id="deny" class="btn btn-default btn-block">
+					</div>
+					</div>
+				</form>
+				</div>
+			</body>
+	</html>
