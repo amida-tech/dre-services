@@ -1163,127 +1163,110 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 					</text>
 
 					<!-- ADDED ENCOUNTER -->
-					<entry typeCode="DRIV">
+					<entry>
 						<encounter classCode="ENC" moodCode="EVN">
-							<!-- ** Encounter activities ** -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.49"/>
-							<id root="2a620155-9d11-439e-92b3-5d9815ff4de8"/>
-							<code code="99213" displayName="Office outpatient visit 15 minutes"
-								codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12"
-								codeSystemVersion="4">
-								<originalText> Checkup Examination <reference value="#Encounter1"/>
+							<id extension="5283815" root="1.3.6.1.4.1.22812.3.99930.3.3.4"/>
+							<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT" code="99231" displayName="UNK">
+								<originalText>
+									<reference value="#ID0ENADA"/>
 								</originalText>
-								<translation code="AMB" codeSystem="2.16.840.1.113883.5.4"
-									displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
 							</code>
-							<!-- February 27, 2009 at 1:00PM EST -->
-							<effectiveTime value="20090207130000+0500"/>
-							<performer>
+							<text>
+								<reference value="#ID0ENADA"/>
+							</text>
+							<effectiveTime>
+								<low value="20121002"/>
+								<high value="20121005"/>
+							</effectiveTime>
+							<sdtc:dischargeDispositionCode codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition" code="01" displayName="Discharged to home or self care (routine discharge)" xmlns:sdtc="urn:hl7-org:sdtc"/>
+							<performer typeCode="PRF">
 								<assignedEntity>
-									<!-- Provider NPI "PseduoMD-3" -->
-									<id root="PseduoMD-3"/>
-									<code code="59058001" codeSystem="2.16.840.1.113883.6.96"
-										codeSystemName="SNOMED CT" displayName="General Physician"/>
+									<id extension="1111111111" root="2.16.840.1.113883.4.6"/>
+									<addr>
+										<streetAddressLine>1002 Healthcare Dr.</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>97005</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom value="tel:+1-(555)555-1122"/>
+									<assignedPerson>
+										<name>
+											<family>Rodriguez</family>
+											<given>Martin</given>
+											<prefix>Dr</prefix>
+										</name>
+									</assignedPerson>
 								</assignedEntity>
 							</performer>
 							<participant typeCode="LOC">
 								<participantRole classCode="SDLOC">
 									<templateId root="2.16.840.1.113883.10.20.22.4.32"/>
-									<!-- Service Delivery Location template -->
-									<code code="1160-1" codeSystem="2.16.840.1.113883.6.259"
-										codeSystemName="HealthcareServiceLocation"
-										displayName="Urgent Care Center"/>
+									<code codeSystem="2.16.840.1.113883.6.259" code="1061-1" displayName="Inpatient Medical/Surgical Ward"/>
 									<addr>
-										<streetAddressLine>17 Daws Rd.</streetAddressLine>
-										<city>Blue Bell</city>
-										<state>MA</state>
-										<postalCode>02368</postalCode>
+										<streetAddressLine>1000 Hospital Way</streetAddressLine>
+										<city>Portland</city>
+										<state>OR</state>
+										<postalCode>97005</postalCode>
 										<country>US</country>
 									</addr>
-									<telecom nullFlavor="UNK"/>
+									<telecom value="tel:+1-(555)555-1122"/>
 									<playingEntity classCode="PLC">
-										<name>Community Urgent Care Center</name>
+										<name>Local Community Hospital</name>
 									</playingEntity>
 								</participantRole>
 							</participant>
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.840.1.113883.10.20.22.4.19"/>
-									<id root="db734647-fc99-424c-a864-7e3cda82e703"
-										extension="45665"/>
-									<code code="404684003" displayName="Finding"
-										codeSystem="2.16.840.1.113883.6.96"
-										codeSystemName="SNOMED CT"/>
+									<id extension="147852" root="1.3.6.1.4.1.22812.3.99930.3.4.1.3"/>
+									<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="409586006"/>
+									<text>
+										<reference value="#ID0EAAFADA"/>
+									</text>
 									<statusCode code="completed"/>
 									<effectiveTime>
-										<low value="20070103"/>
+										<low nullFlavor="UNK"/>
 									</effectiveTime>
-									<value xsi:type="CD" code="233604007" displayName="Pneumonia"
-										codeSystem="2.16.840.1.113883.6.96"/>
+									<value xsi:type="CD" nullFlavor="UNK"/>
 								</observation>
 							</entryRelationship>
-						</encounter>
-					</entry>
-
-										<!-- ADDED ENCOUNTER TWO-->
-					<entry typeCode="DRIV">
-						<encounter classCode="ENC" moodCode="EVN">
-							<!-- ** Encounter activities ** -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.49"/>
-							<id root="2a620155-9d11-439e-92b3-5d9815ff4de8"/>
-							<code code="99213" displayName="Office outpatient visit 15 minutes"
-								codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12"
-								codeSystemVersion="4">
-								<originalText> Checkup Examination <reference value="#Encounter1"/>
-								</originalText>
-								<translation code="AMB" codeSystem="2.16.840.1.113883.5.4"
-									displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
-							</code>
-							<!-- February 27, 2009 at 1:00PM EST -->
-							<effectiveTime value="20090224130000+0500"/>
-							<performer>
-								<assignedEntity>
-									<!-- Provider NPI "PseduoMD-3" -->
-									<id root="PseduoMD-3"/>
-									<code code="59058001" codeSystem="2.16.840.1.113883.6.96"
-										codeSystemName="SNOMED CT" displayName="General Physician"/>
-								</assignedEntity>
-							</performer>
-							<participant typeCode="LOC">
-								<participantRole classCode="SDLOC">
-									<templateId root="2.16.840.1.113883.10.20.22.4.32"/>
-									<!-- Service Delivery Location template -->
-									<code code="1160-1" codeSystem="2.16.840.1.113883.6.259"
-										codeSystemName="HealthcareServiceLocation"
-										displayName="Urgent Care Center"/>
-									<addr>
-										<streetAddressLine>17 Daws Rd.</streetAddressLine>
-										<city>Blue Bell</city>
-										<state>MA</state>
-										<postalCode>02368</postalCode>
-										<country>US</country>
-									</addr>
-									<telecom nullFlavor="UNK"/>
-									<playingEntity classCode="PLC">
-										<name>Community Urgent Care Center</name>
-									</playingEntity>
-								</participantRole>
-							</participant>
-							<entryRelationship typeCode="RSON">
-								<observation classCode="OBS" moodCode="EVN">
-									<templateId root="2.16.840.1.113883.10.20.22.4.19"/>
-									<id root="db734647-fc99-424c-a864-7e3cda82e703"
-										extension="45665"/>
-									<code code="404684003" displayName="Finding"
-										codeSystem="2.16.840.1.113883.6.96"
-										codeSystemName="SNOMED CT"/>
-									<statusCode code="completed"/>
-									<effectiveTime>
-										<low value="20070103"/>
-									</effectiveTime>
-									<value xsi:type="CD" code="233604007" displayName="Pneumonia"
-										codeSystem="2.16.840.1.113883.6.96"/>
-								</observation>
+							<entryRelationship typeCode="REFR">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.80"/>
+									<code code="29308-4" displayName="Encounter Diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
+											<id extension="55412" root="1.3.6.1.4.1.22812.3.99930.3.4.1.2.1"/>
+											<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis"/>
+											<text>
+												<reference value="#ID0EAAAEADA"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="20121002100051"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="126675008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Neoplasm of accessory sinus">
+												<originalText>
+													<reference value="#ID0EAAAEADA"/>
+												</originalText>
+											</value>
+											<entryRelationship typeCode="REFR">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.22.4.6"/>
+													<code displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="33999-4"/>
+													<text>
+														<reference value="#ID0EADAAEADA"/>
+													</text>
+													<statusCode code="completed"/>
+													<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55561003" displayName="Active"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+								</act>
 							</entryRelationship>
 						</encounter>
 					</entry>
@@ -1303,7 +1286,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									displayName="Ambulatory" codeSystemName="HL7 ActEncounterCode"/>
 							</code>
 							<!-- February 27, 2009 at 1:00PM EST -->
-							<effectiveTime value="20070227130000+0500"/>
+							<effectiveTime value="20090227130000+0500"/>
 							<performer>
 								<assignedEntity>
 									<!-- Provider NPI "PseduoMD-3" -->
@@ -1826,91 +1809,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 
 
 					<!-- ADDED IMMUNIZATION -->
-               <entry>
-                  <substanceAdministration classCode="SBADM" negationInd="true" moodCode="EVN">
-                     <templateId root="2.16.840.1.113883.10.20.22.4.52" />
-                     <id extension="1049280" root="1.3.6.1.4.1.22812.4.111.0.4.4" />
-                     <text mediaType="text/xml">
-                        <reference value="#ID0EBKABA" />
-                     </text>
-                     <statusCode code="completed" />
-                     <effectiveTime value="20120806153500-0400" />
-                     <routeCode codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" code="C28161" displayName="INTRAMUSCULAR" />
-                     <doseQuantity value="0.5" unit="ml" />
-                     <consumable typeCode="CSM">
-                        <manufacturedProduct classCode="MANU">
-                           <templateId root="2.16.840.1.113883.10.20.22.4.54" />
-                           <manufacturedMaterial>
-                              <code code="33" codeSystem="2.16.840.1.113883.12.292" codeSystemName="CVX" displayName="Pneumococcal (2 years and up)">
-                                 <originalText>
-                                    <reference value="#ID0EEBKABA" />
-                                 </originalText>
-                              </code>
-                              <lotNumberText>MK456987</lotNumberText>
-                           </manufacturedMaterial>
-                           <manufacturerOrganization>
-                              <name>Merck and Co., Inc.</name>
-                              <telecom nullFlavor="UNK" />
-                              <addr nullFlavor="NI" />
-                           </manufacturerOrganization>
-                        </manufacturedProduct>
-                     </consumable>
-                     <performer typeCode="PRF">
-                        <assignedEntity>
-                           <id extension="1569874562" root="2.16.840.1.113883.4.6" />
-                           <addr>
-                              <streetAddressLine>1002 Healthcare Dr.</streetAddressLine>
-                              <city>Portland</city>
-                              <state>OR</state>
-                              <postalCode>97005</postalCode>
-                              <country>US</country>
-                           </addr>
-                           <telecom value="tel:+1-(555)555-1002" />
-                           <assignedPerson>
-                              <name>
-                                 <family>Seven</family>
-                                 <given>Henry</given>
-                              </name>
-                           </assignedPerson>
-                        </assignedEntity>
-                     </performer>
-                     <author>
-                        <time value="20120806160645-0400" />
-                        <assignedAuthor>
-                           <id extension="1569874562" root="2.16.840.1.113883.4.6" />
-                           <addr>
-                              <streetAddressLine>1002 Healthcare Dr.</streetAddressLine>
-                              <city>Portland</city>
-                              <state>OR</state>
-                              <postalCode>97005</postalCode>
-                              <country>US</country>
-                           </addr>
-                           <telecom value="tel:+1-(555)555-1002" />
-                           <assignedPerson>
-                              <name>
-                                 <family>Seven</family>
-                                 <given>Henry</given>
-                              </name>
-                           </assignedPerson>
-                        </assignedAuthor>
-                     </author>
-                     <entryRelationship typeCode="SUBJ" inversionInd="true">
-                        <act classCode="ACT" moodCode="EVN">
-                           <templateId root="2.16.840.1.113883.10.20.22.4.64" />
-                           <code code="48767-8" displayName="Annotation Comment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
-                           <text>
-                              <reference value="#ID0ECKBKABA" />
-                           </text>
-                           <statusCode code="completed" />
-                        </act>
-                     </entryRelationship>
-                     <entryRelationship typeCode="SUBJ">
-                        <encounter classCode="ENC" moodCode="EVN">
-                           <id extension="10043698" root="1.3.6.1.4.1.22812.4.111.0.3.4" />
-                        </encounter>
-                     </entryRelationship>
-                  </substanceAdministration>
-               </entry>
+
 
 					<entry typeCode="DRIV">
 						<substanceAdministration classCode="SBADM" moodCode="EVN"
@@ -2390,7 +2289,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 							<statusCode code="completed"/>
 							<effectiveTime xsi:type="IVL_TS">
 								<low value="20121002"/>
-								<high nullFlavor="UNK"/>
+								<high nullFlavor="20151002"/>
 							</effectiveTime>
 							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
 								<period value="12" unit="h"/>
@@ -2400,7 +2299,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 								<manufacturedProduct classCode="MANU">
 									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
 									<manufacturedMaterial>
-										<code code="329646" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Cefepime 20 MG/ML">
+										<code code="329646" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Cefepime">
 											<originalText>
 												<reference value="#ID0ECDPACA"/>
 											</originalText>
@@ -2951,85 +2850,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 					</entry>
 				</section>
 			</component>
-			<!-- ***************************** PLAN OF CARE ******************************** -->
-			<component>
-				<section>
-					<!-- Plan of care section -->
-					<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
-					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-						displayName="Treatment plan"/>
-					<title>PLAN OF CARE</title>
-					<text>
-						<table border="1" width="100%">
-							<thead>
-								<tr>
-									<th>Planned Activity</th>
-									<th>Planned Date</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Colonoscopy</td>
-									<td>20120512</td>
-								</tr>
-							</tbody>
-						</table>
-					</text>
-					<!-- Examples of the same planned activity are shown in different plan of care entries -->
-					<entry typeCode="DRIV">
-						<observation classCode="OBS" moodCode="RQO">
-							<!-- ** Plan of care activity observation ** -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.44"/>
-							<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4a"/>
-							<code code="73761001" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED CT" displayName="Colonoscopy"/>
-							<statusCode code="new"/>
-							<effectiveTime>
-								<center value="20120512"/>
-							</effectiveTime>
-						</observation>
-					</entry>
-					<entry>
-						<act moodCode="RQO" classCode="ACT">
-							<!-- ** Plan of care activity act ** -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.39"/>
-							<id root="9a6d1bac-17d3-4195-89a4-1121bc809a5c"/>
-							<code code="73761001" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED CT" displayName="Colonoscopy"/>
-							<statusCode code="new"/>
-							<effectiveTime>
-								<center value="20120512"/>
-							</effectiveTime>
-						</act>
-					</entry>
-					<entry>
-						<encounter moodCode="INT" classCode="ENC">
-							<!-- ** Plan of care activity encounter ** -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.40"/>
-							<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4d"/>
-							<code code="73761001" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED CT" displayName="Colonoscopy"/>
-							<statusCode code="new"/>
-							<effectiveTime>
-								<center value="20120512"/>
-							</effectiveTime>
-						</encounter>
-					</entry>
-					<entry>
-						<procedure moodCode="RQO" classCode="PROC">
-							<!-- ** Plan of care activity procedure ** -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.41"/>
-							<id root="9a6d1bac-17d3-4195-89c4-1121bc809b5a"/>
-							<code code="73761001" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED CT" displayName="Colonoscopy"/>
-							<statusCode code="new"/>
-							<effectiveTime>
-								<center value="20120512"/>
-							</effectiveTime>
-						</procedure>
-					</entry>
-				</section>
-			</component>
+
 			<!-- ************************* PROBLEM LIST ****************************** -->
 			<component>
 				<section>
@@ -4174,7 +3995,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									</text>
 									<statusCode code="completed"/>
 									<effectiveTime value="20121002"/>
-									<value xsi:type="PQ" value="64" unit="[in_us]"/>
+									<value xsi:type="PQ" value="70" unit="[in_us]"/>
 									<author>
 										<time value="20121002103000-0400"/>
 										<assignedAuthor>
@@ -4321,6 +4142,23 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									/>
 								</observation>
 							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Vital sign observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8462-4" codeSystem="2.16.840.1.113883.6.1"
+										codeSystemName="LOINC" displayName="Intravascular Diastolic"/>
+									<text>
+										<reference value="#vit4"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="19991114"/>
+									<value xsi:type="PQ" value="80" unit="mm[Hg]"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"
+									/>
+								</observation>
+							</component>
 						</organizer>
 					</entry>
 					<entry typeCode="DRIV">
@@ -4362,7 +4200,7 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									</text>
 									<statusCode code="completed"/>
 									<effectiveTime value="20000407"/>
-									<value xsi:type="PQ" value="88" unit="kg"/>
+									<value xsi:type="PQ" value="90" unit="kg"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"
 									/>
 								</observation>
@@ -4384,6 +4222,23 @@ encoded in RxNorm, RxNorm, NDF-RT and UNII respectively.
 									/>
 								</observation>
 							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- ** Vital sign observation ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+									<id root="c6f88321-67ad-11db-bd13-0800200c9a66"/>
+									<code code="8462-4" codeSystem="2.16.840.1.113883.6.1"
+										codeSystemName="LOINC" displayName="Intravascular Diastolic"/>
+									<text>
+										<reference value="#vit7"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="20000407"/>
+									<value xsi:type="PQ" value="88" unit="mm[Hg]"/>
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"
+									/>
+								</observation>
+							</component>	
 						</organizer>
 					</entry>
 				</section>
