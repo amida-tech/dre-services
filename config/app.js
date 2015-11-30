@@ -61,35 +61,6 @@ module.exports = function () {
 
     var redisStore = require('connect-redis')(session); //uncomment for Redis session support during development
 
-    //to run fully built UI use this line (run "grunt build" in /client first)
-    //app.set('client_location', path.resolve(__dirname, '../client/dist'));
-
-    //to run development version of UI use this line
-    // app.set('client_location', path.resolve(__dirname, '../client/app'));
-
-    //app.set('client_location', path.resolve(__dirname, '../phr-prototype/dist'));
-
-    //app.use(express.favicon(config.client.location + '/favicon.ico'));
-    // app.use(express.static(app.get('client_location')));
-    // app.use(function (req, res, next) {
-    //     var requestPath = '';
-    //     if (req.path.substring(req.path.length - 1) === '/') {
-    //         requestPath = req.path.substring(0, req.path.length - 1);
-    //     } else {
-    //         requestPath = req.path;
-    //     }
-    //     var viewPath = app.get('client_location') + requestPath + '.html';
-    //     fs.exists(viewPath, function (exists) {
-    //         //console.log(viewPath);
-    //         if (exists) {
-    //             res.header("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-    //             res.render(viewPath);
-    //         } else {
-    //             next();
-    //         }
-    //     });
-    // });
-
     /*      Porting notes from express 3: Item 1 was what it was before, 2s are
             equivalent versions from previous express 3 versions */
     //     1) app.use(express.bodyParser());
