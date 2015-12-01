@@ -18,16 +18,11 @@ DRE has 4 primary elements
 
 #### 1 - Parsing and Normalization Library.
 
-This parses incoming data into a homogenous, simplified and normalized data model in JSON format.
-
-Parsing library code: [amida-tech/blue-button](https://github.com/amida-tech/blue-button)
-
+This parses incoming data into a homogenous, simplified and normalized data model in FHIR DSTU2 JSON format.
 
 #### 2 - Matching Library.
 
-This takes the standardized data elements and flags probable duplicate values. New patient records are compared against the existing Master Health Record and automatically matched. The result produces a list of all entries in the new record, labelled as duplicates (0 % match), new entries (100% match), or partial matches (to be reconciled by patient in a next step).
-
-Matching library code: [amida-tech/blue-button-match](https://github.com/amida-tech/blue-button-match)
+This takes the standardized data elements and flags probable duplicate values. Patient records are compared and automatically matched. The result is deduplicated and produces a list of all entries that are matched (to be reconciled by patient in a next step).
 
 #### 3 - Reconciliation Interface.
 
