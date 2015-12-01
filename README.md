@@ -1,16 +1,47 @@
 Data Reconciliation Engine (DRE) Services
 =========
 
-## This version of DRE-services is based on [DRE commit # 09f23c3772af2444c16d03454e20f6e19f7fd512](https://github.com/amida-tech/DRE/commit/09f23c3772af2444c16d03454e20f6e19f7fd512)
+DRE is a MEAN based server side component for reconciling health data.
+
+High Level Overview
+===================
+![DRE High Level Diagram](docs/images/dre_overview_new.png)
+
+The purpose of the Data Reconciliation Engine is to take personal health data in a variety of formats (starting with BlueButton/CCDA) from multiple sources and parse/normalize/de-duplicate/merge it into a single Patient's Master Health Record with patient assistance (although most of hard work will be done automagically).
 
 
+DRE's components
+=================
+![DRE Components Diagram](docs/images/dre_four_components.png)
 
-[![Build Status](https://travis-ci.org/amida-tech/DRE-services.svg)](https://travis-ci.org/amida-tech/DRE-services)
-[![Dependency Status](https://david-dm.org/amida-tech/DRE-services.svg)](https://david-dm.org/amida-tech/DRE-services)
+DRE has 4 primary elements
+
+#### 1 - Parsing and Normalization Library.
+
+This parses incoming data into a homogenous, simplified and normalized data model in JSON format.
+
+Parsing library code: [amida-tech/blue-button](https://github.com/amida-tech/blue-button)
+
+
+#### 2 - Matching Library.
+
+This takes the standardized data elements and flags probable duplicate values. New patient records are compared against the existing Master Health Record and automatically matched. The result produces a list of all entries in the new record, labelled as duplicates (0 % match), new entries (100% match), or partial matches (to be reconciled by patient in a next step).
+
+Matching library code: [amida-tech/blue-button-match](https://github.com/amida-tech/blue-button-match)
+
+#### 3 - Reconciliation Interface.
+
+This provides a RESTful API and UI for review and evaluation of duplicate or partially matched entries, by the patient.
+
+#### 4 - Master Record Interface.
+
+Standard FHIR DSTU2 API is used as master record backend
+
+Documentation for [FHIR DSTU2](https://www.hl7.org/fhir/)
 
 ###Prerequisites
 
-- Node.js (v0.10+) and NPM
+- Node.js (v0.12+) and NPM
 - Grunt.js
 - MongoDB
 - Redis
@@ -60,6 +91,12 @@ Contributors are welcome. See issues https://github.com/amida-tech/DRE-services/
 _We gratefully acknowledge PWC's essential support in the development of the FHIR components of DRE, among other important contributions to codebase of this open source project._
 
 - Afsin Ustundag
+
+
+## Release Notes
+
+See release notes [here] (./RELEASENOTES.md)
+
 
 ## License
 
