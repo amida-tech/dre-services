@@ -19,10 +19,10 @@ module.exports = function (grunt) {
     //grunt.option('force', true); //DISABLED, not good idea in general
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint', 'jsbeautifier:beautify', 'env:test', 'express:dev', 'mochaTest:test']); //need to add in 'mochaTest:oauthTest'
+    grunt.registerTask('default', ['jshint', 'jsbeautifier:beautify', 'env:test', 'express:dev', 'wait', 'mochaTest:test']); //need to add in 'mochaTest:oauthTest'
 
     grunt.registerTask('oauth', ['env:test', 'express:dev', 'jshint', 'mochaTest:oauthTest']);
-    
+
     grunt.registerTask('hapi', ['env:test', 'express:dev', 'jshint', 'mochaTest:hapiTest']);
 
     // Not ready for use
@@ -135,6 +135,22 @@ module.exports = function (grunt) {
                 limit: 10
             }
         },
+        // Wait some time before service startup is complete
+        wait: {
+            options: {
+                delay: 1500
+            },
+            pause: {
+                options: {
+                    before: function (options) {
+                        console.log('pausing %dms', options.delay);
+                    },
+                    after: function () {
+                        console.log('pause end');
+                    }
+                }
+            },
+        },
         env: {
             options: {
                 //Shared Options Hash
@@ -146,7 +162,8 @@ module.exports = function (grunt) {
                 }
             },
             test: {
-                DBname: 'devtests'
+                DBname: 'devtests',
+                FHIR_URL: 'http://localhost:8080/fhir-test/baseDstu2/'
             }
         },
         mochaTest: {
