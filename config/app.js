@@ -21,6 +21,7 @@ var http = require('http');
 var path = require('path');
 var app = express();
 var passport = require('passport');
+var cors = require('cors');
 
 var logger = require('morgan');
 var multiparty = require('connect-multiparty');
@@ -38,14 +39,15 @@ module.exports = function () {
         'strict': false
     }));
 
-    //Adding CORS for Swagger UI
-    app.use(function (req, res, next) {
-        res.header("Access-Control-Allow-Origin", req.get('origin') || "*");
-        res.header("Access-Control-Allow-Credentials", true);
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-        res.header("Access-Control-Allow-Methods", "GET, POST, PUT");
-        next();
-    });
+    app.options('*', cors());
+    app.use(cors());
+    // app.use(function (req, res, next) {
+    //     res.header("Access-Control-Allow-Origin", req.get('origin') || "*");
+    //     res.header("Access-Control-Allow-Credentials", true);
+    //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    //     res.header("Access-Control-Allow-Methods", "GET, POST, PUT");
+    //     next();
+    // });
 
     //to prevent caching of API calls
     app.disable('etag');
