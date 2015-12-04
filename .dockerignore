@@ -1,0 +1,10 @@
+deploy
+docs
+.git*
+.travis.yml
+*.md
+Procfile
+*.pdf
+*.sh
+*.txt
+*.log
