@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+	crossorigin="anonymous">
+	<style>
+		body {
+			background: rgb(75, 70, 83);
+			margin: 15px;
+		}
+		
+		label {
+			color: white;
+		}
+	</style>
+
+	<head>
+
+		<body>
+			<div class="container">
+					<img src="http://dre2.amida-demo.com:3000/images/bb-logo-vector.png" class="img-circle center-block">
+					<form method="post" action="<%= loginUri %>" role="form" class="form-horizontal">
+						<div class="form-group">
+							<%= msg %>
+						</div>
+						<div class="form-group">
+							<label for="username">Username:</label>
+								<input type="text" class="form-control" name="username" id="username">
+							
+						</div>
+
+						<div class="form-group">
+							<label for="password">Password:</label>
+								<input type="password" class="form-control" name="password" id="password">
+						</div>
+
+						<div class="form-group">
+							<input type="hidden" value="<%= clientId %>" name="clientId">
+							<input type="hidden" value="<%= redirectUri %>" name="redirectUri">
+							<input type="hidden" value="<%= responseType %>" name="responseType">
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="submit" value="Submit" class="btn btn-default btn-block">
+							</div>
+						</div>
+
+					</form>
+			</div>
+		</body>
+
+</html>
