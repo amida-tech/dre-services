@@ -74,7 +74,7 @@ module.exports = function () {
         resave: true,
         saveUninitialized: true,
         store: new redisStore({
-                host: process.env.DB_PORT_6379_TCP_ADDR || '0.0.0.0',
+                host: process.env.REDIS_PORT_6379_TCP_ADDR || '0.0.0.0',
                 port: 6379,
                 prefix: 'chs-sess'
             }) //uncomment for Redis session support during development
