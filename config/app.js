@@ -39,12 +39,17 @@ module.exports = function () {
         'strict': false
     }));
 
-    app.options('*', cors());
-    app.use(cors());
+    var corsOptions = {
+        origin: true,
+        credentials: true
+    };
+
+    app.options('*', cors(corsOptions));
+    app.use(cors(corsOptions));
 
     //to prevent caching of API calls
     app.disable('etag');
-    
+
     app.use('/docs', express.static('./swagger'));
 
     app.engine('html', require('ejs').renderFile);
@@ -69,10 +74,10 @@ module.exports = function () {
         resave: true,
         saveUninitialized: true,
         store: new redisStore({
-                host: process.env.REDIS_PORT_6379_TCP_ADDR || '0.0.0.0',
-                port: 6379,
-                prefix: 'chs-sess'
-            }) //uncomment for Redis session support during development
+            host: process.env.REDIS_PORT_6379_TCP_ADDR || '0.0.0.0',
+            port: 6379,
+            prefix: 'chs-sess'
+        }) //uncomment for Redis session support during development
     }));
 
     app.use(passport.initialize());
@@ -105,7 +110,7 @@ module.exports = function () {
 
     var medapi = require('../lib/medapi');
     app.use(medapi);
-    
+
     var npiapi = require('../lib/npiapi');
     app.use(npiapi);
 
@@ -114,7 +119,7 @@ module.exports = function () {
 
     var record = require('../lib/record');
     app.use(record);
-    
+
     app.set('port', (process.env.PORT || 3000));
 
     return app;
