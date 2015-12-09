@@ -2,7 +2,7 @@
   "author": "Dmitry Kachaev, Matthew McCall, Ekavali Mishra, Jamie Johnson, Jacob Sachs, Matt Martz, Alexey Shchelokov and Afsin Ustundag",
   "name": "DRE-Services",
   "description": "Data Reconcilliation Engine (Services).",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:amida-tech/DRE-services.git"
@@ -62,7 +62,7 @@
     "cda-fhir": "~2.0.0",
     "c32-fhir": "~2.0.0",
     "ccd-fhir": "~2.0.0",
-    "dre-data": "git://github.com/amida-tech/dre-data.git",
+    "dre-data": "~2.1.0",
     "fhir2ccda": "~2.0.0"
   },
   "engines": {
