@@ -4,11 +4,11 @@ FROM centos:centos7
 MAINTAINER Jacob Sachs <jacob@amida-tech.com>
 
 # Enable Extra Packages for Enterprise Linux (EPEL) for CentOS
-RUN yum install -y epel-release
-# Add git
-RUN yum install -y git
-# Add make
-RUN yum install -y make
+# Install additional tools
+RUN yum install -y \
+    epel-release
+    git
+    make
 
 # Install Node and NPM
 RUN git clone https://github.com/creationix/nvm.git /.nvm && \
